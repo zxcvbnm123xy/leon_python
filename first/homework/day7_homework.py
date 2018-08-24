@@ -153,3 +153,5 @@ def q10():
     print(id(a),id(b),id(c))
     print(id(a[:]),id(b[:]),id(c[:]))
 
+#test
+
