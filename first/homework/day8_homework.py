@@ -46,10 +46,56 @@ d={"tom":100,"zoo":90,"kate":90,"jerry":95,"apple":77}
 # print(sorted(d.keys()))
 # print(sorted(d.values()))
 #按key排序
-print(sorted(d.items()))
+# print(sorted(d.items()))
 
 # 按value排序
 # v_list=list(d.values())
 # v_list.sort()
 # print(v_list)
 
+#练习：模仿abs，写一个返回abs的函数
+# def abs1(x):
+#   print(abs(x))
+
+def abs_new(x):
+    if x>=0:
+        x=x
+    elif x<0:
+        x=-x
+    return x
+
+print(abs_new(-99))
+
+#练习，求一元二次方程的解，两个解(只做d判断是否有解)
+#ax^2+bx+c=0，b**2-4ac>0
+import math
+def fc(a,b,c):
+    d=b**2-4*a*c
+    if d>=0:
+        x1=(-b+math.sqrt(d))/(2*a)
+        x2 = (-b - math.sqrt(d)) / (2 * a)
+
+        return "有两个解"
+    else:
+        return None
+    return x1,x2
+print(fc(2,3,1))
+
+#练习，写一个函数计算x的n次方
+def pow(x,n):
+    s=1
+    if n>0:
+        for i in range(n):
+            s*=x
+        return s
+    else:
+        for i in range(-n):
+            s*=x
+        return 1/s
+print(pow(2,-5))
+
+def p(x,n):
+    if x==0 and x<0:
+        return "不存在"
+    return x**n
+print(p(2,8))
