@@ -21,3 +21,5 @@ class Computer:
 c=Computer("i7","8.00G","500G")
 c.cpu_memory()
 c.computer_introduce()
+
+
