@@ -153,3 +153,84 @@ print(a.count(1))
 #返回某一个元素的位置
 print(a.index(1))
 
+print(4%10)
+
+# 常用字符
+# ascii
+#  gb2312
+#  big5 繁体
+# GBK：亚洲的支持比如中文，韩文，日文，大字符集
+# UNicode字符集（定长存储）：将所有的语言统一到一套编码中，2-4个自己写
+# 包括ascii也用两个字节，所以很浪费空间
+#  utf-8 字符集（变长储存），英文使用一个字节表示，汉字一般用三个字节
+#
+# 因为字节和字符串使用的编码集不一样：
+# 字节 ascii
+#字符串 Unicode 字符集
+
+print(ord("a"))
+
+#二、Unicode和utf-8
+#1.Unicode
+print(ord("中")) #计算机内部其实存的就是20013对应的二进制
+print(chr(20013))  #ord 和 chr是可逆的 一个是汉字 一个是二进制
+
+#0x4e2d 20013对应的16进制
+print(hex(20013))
+
+#对应的Unicode字符集， \u4e2d 取对应的十进制找到十六进制，就是对应的Unicode字符集
+print("\u4e2d")
+
+#2.utf-8字符集
+print("中".encode())  #可以直接将字符转换成utf-8的编码集
+# b'\xe4\xb8\xad'
+print(bin(0xe4),bin(0xb8),bin(0xad))
+
+# 0b11100100 0b10111000 0b10101101
+# unicode      100111000101101
+
+# 3.在计算机中两个字符集之间的合作关系
+# （1）.计算机内存中，统一使用unicode编码（因为unicode的速度快），
+# 当需要保存到硬盘或者内存的时候，需要转成utf-8（因为utf-8省资源）
+# 五个组成部分 硬盘存储，内存，控制器，计算中心，io
+# （2）.浏览网页的时候，服务器也是把动态生成的unicode内容转成utf-8，再传到服务器
+#       所以网页看到的编码应该都是utf-8
+
+# 三、Python中的字节和字符之间的转换
+# 在python 中 字节：utf-8  字符串：unicode
+
+# 字符串（unicode）---->字节（utf-8） 编码encode
+s="中国"
+print(s.encode())  #encoding 参数不设置，默认utf-8
+print(s.encode(encoding="gb2312"))
+
+# 字节（utf-8）------>字符串（unicode） 解码decode
+b=b'\xe4\xb8\xad\xe5\x9b\xbd'
+print(b.decode())
+b1=b'\xd6\xd0\xb9\xfa'
+print(b1.decode(encoding="gb2312"))
+
+# day=int(input("请输入星期几："))
+# print("今天是周{}".format(day if 1<=day<=5 else "末"))
+#
+# x=int(input("请输入0或1："))
+# print("男的" if x==0 else "女的")
+
+# 断言：断定某些语句是都正确
+# 语法：一旦表达式返回False，程序回报AssertionError，程序被停止，无法继续
+"""
+assert 表达式，错误信息
+"""
+# assert 1>6,"谁告诉你的？"
+
+# 1+2+...+100
+x=1
+s=0
+# while x<=100:
+#     s+=x
+#     x+=1
+# print(s)
+for x in  range(1,101,2):
+    s+=x
+
+print(s)
