@@ -1,5 +1,5 @@
 """
-第十九章  线程
+第十七章  线程
 
 六、死锁
 死锁的定义：当两个或者多个线程同时拥有自己的资源，又互相等待对方的资源，
@@ -46,39 +46,149 @@ import threading,time
 #            # 被唤醒的时机：只要有商品被生产了
 
 from threading import Condition
-lock=threading.Condition()
+# lock=threading.Condition()
+#
+# def produce(li):
+#     i=0
+#     while  True:
+#         try:
+#             lock.acquire()
+#             if len(li)==3:
+#                 print("仓库已满，生产阻塞")
+#                 lock.wait()
+#             else:
+#                 li.append("商品{}".format(i))
+#                 i+=1
+#                 print("生产了{}商品".format(i))
+#                 lock.notify_all()
+#         finally:
+#             lock.release()
+#
+# def consume(li):
+#     while True:
+#         try:
+#             lock.acquire()
+#             if  len(li)==0:
+#                 print("仓库已空，消费阻塞")
+#                 lock.wait()
+#             else:
+#                 print("消费了{}商品".format(li.pop(0)))
+#                 lock.notify_all()
+#         finally:
+#             lock.release()
+#
+# li=[]
+# t1=threading.Thread(target=produce,args=(li,))
+# t2=threading.Thread(target=consume,args=(li,))
+# t1.start()
+# t2.start()
 
-def produce(li):
-    i=0
-    while  True:
-        try:
-            lock.acquire()
-            if len(li)==3:
-                print("仓库已满，生产阻塞")
-                lock.wait()
-            else:
-                li.append("商品{}".format(i))
-                i+=1
-                print("生产了{}商品".format(i))
-                lock.notify_all()
-        finally:
-            lock.release()
 
-def consume(li):
+# 八、队列（线程）
+# 队列数据类型，内部实现了锁的机制，队列多用于多线程的并发
+# 队列分为三种：
+"""
+先进先出队列：队列
+先进后出队列：堆栈
+优先队列：按照优先级出队列
+"""
+# import queue
+# #（1）先进先出队列
+# #queue.Queue(size):size=0或者负数，表示无限容量，如果size有值，代表最大容量
+# q=queue.Queue(3)
+# # 通过q.qsize() 返回队列中元素的格式
+# print(q.qsize())
+# # q.empty队列是否为空
+# print(q.empty())
+# # q.full() 判断队列是否已满
+# print(q.full())
+# # q.put向队列中添加元素
+# # item:要添加的元素
+# # block：继续向队列中添加元素的时候，如果队列已满，put方法是否是处于阻塞状态（默认True）
+# # block如果=False，当队列已满的时候 ，再继续添加元素，则会报错。
+# # timeout：队列已满，如果在指定的时间内（单位：秒），仍然无法添加元素，则会产生异常
+# q.put("hello")
+# q.put("world",block=False)
+#
+# #put_nowait 代表只要队列已满，put函数执行的时候会报错。
+# # q.put_nowait(item)  # 等价于put(item,block=False)
+#
+# # q.get() 向外取元素（规则就是先进先出）
+# q.put("python")
+# print(q.get())
+# print(q.get())
+# print(q.get())
+# print(q.get())
+
+# 如果队列是空队列，继续向外get元素，get方法是默认的阻塞函数。用法跟put中一样。
+# q.get(block=False)
+# q.get_nowait()====q.get(block=False)
+
+
+# （2）先进后出，堆栈
+# lq=queue.LifoQueue()
+# lq.put(1)
+# lq.put(2)
+# lq.put(3)
+# # print(lq.get())
+# # print(lq.get())
+# # print(lq.get())
+# # print(lq.get())
+# while not q.empty():
+#     print(q.get())
+
+# （3）优先队列
+# 不是按照传统队列的先进先出，或者后进先出，而是根据队列的优先级别进行排列
+# 进的时候，正常进入 ，出的时候是按照优先级别出
+# 优先级队列中的元素必须支持元素之间的比较。
+# print("abc"<"bcd")
+# print((1,2,4)<(3,4))
+# q=queue.PriorityQueue()
+# q.put("clock")
+# q.put("banana")
+# q.put("egg")
+# q.put("apple")
+# while not q.empty():
+#     print(q.get())
+#
+# q.put((1,2,3))
+# q.put((2,2,3))
+# q.put((3,2,3))
+# q.put((-1,2,3))
+# while not q.empty():
+#     print(q.get())
+#
+#
+# q=queue.PriorityQueue()
+# q.put((2,"clock"))
+# q.put((1,"banana"))
+# q.put((3,"egg"))
+# q.put((4,"apple"))
+# # q.put("a") #
+# while not q.empty():
+#     print(q.get())
+
+
+# 应用队列实现生产者和消费者的例子
+import queue
+import threading
+def produce(q):
+    i=1
     while True:
-        try:
-            lock.acquire()
-            if  len(li)==0:
-                print("仓库已空，消费阻塞")
-                lock.wait()
-            else:
-                print("消费了{}商品".format(li.pop(0)))
-                lock.notify_all()
-        finally:
-            lock.release()
+        q.put(i)
+        print("生产商品{}".format(i))
+        i+=1
+        time.sleep(0.5)
 
-li=[]
-t1=threading.Thread(target=produce,args=(li,))
-t2=threading.Thread(target=consume,args=(li,))
+def consume(q,name):
+    while True:
+        print("{}消费了{}".format(name,q.get()))
+        time.sleep(0.1)
+# 队列本身创建的时候就有容量的设置
+q=queue.Queue(3)
+t1=threading.Thread(target=produce,args=(q,))
+t2=threading.Thread(target=consume,args=(q,"tom"))
+t3=threading.Thread(target=consume,args=(q,"jerry"))
 t1.start()
 t2.start()
+t3.start()
