@@ -114,7 +114,7 @@ import os
 # 回调函数定义：
 """
 def 回调函数名(参数[任务函数的返回值]):
-   pass
+   pass、【、
 """
 # 回调函数的调用
 # 在异步申请时，加入callback关键字=回调函数的名字
@@ -244,7 +244,7 @@ if __name__=="__main__":
 # wait函数可以返回一个元组，一个是执行完，一个是还没有执行完的任务
 # return_when： ALL_COMPLETED：全部执行完成
 # return_when：FIRST_COMPLETED:保证第一个任务执行完毕
-# timeout=超时时间，如果超过了timeout，则阻塞，wait返回值。
+# timeout=超时时间，如果超过了timeout，则不再阻塞，wait返回值。
 # from concurrent.futures import as_completed,wait,ALL_COMPLETED,FIRST_COMPLETED
 # if __name__=="__main__":
 #     with ProcessPoolExecutor(max_workers=4) as executor:
