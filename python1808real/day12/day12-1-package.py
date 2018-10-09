@@ -33,7 +33,7 @@
 
 # 4. __all__变量
 # all是一个列表，可以在列表下加入可以导入的名字
-from day12 import *
+from  day12 import *
 print(x)
 print(y)
 

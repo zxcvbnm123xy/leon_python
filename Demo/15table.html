@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table标签</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>姓名</td>
+        <td>成绩</td>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>88</td>
+    </tr>
+    <tr>
+        <td>李四</td>
+        <td>92</td>
+    </tr>
+</table>
+<hr/>
+<!-- 设置表格的相关属性-->
+<table width="500" align="center" border="1">
+    <tr>
+        <td colspan="2" align="center">学生成绩信息</td>
+    </tr>
+    <tr>
+        <td>姓名</td>
+        <td>成绩</td>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>88</td>
+    </tr>
+    <tr>
+        <td>李四</td>
+        <td>92</td>
+    </tr>
+</table>
+<hr/>
+<table width="500" align="center" border="1" cellspacing="0">
+    <tr>
+        <td rowspan="3">科目</td>
+        <td>语文</td>
+        <td>89</td>
+    </tr>
+    <tr>
+        <td>数学</td>
+        <td>95</td>
+    </tr>
+    <tr>
+        <td>外语</td>
+        <td>100</td>
+    </tr>
+</table>
+<hr/>
+<table width="500" align="center" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <td rowspan="3">科目</td>
+        <td>语文</td>
+        <td>89</td>
+    </tr>
+    <tr>
+        <td>数学</td>
+        <td>95</td>
+    </tr>
+    <tr>
+        <td>外语</td>
+        <td>100</td>
+    </tr>
+</table>
+<hr/>
+<table width="500" align="center" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+    <tr>
+        <td rowspan="3">科目</td>
+        <td>语文</td>
+        <td>89</td>
+    </tr>
+    <tr>
+        <td>数学</td>
+        <td>95</td>
+    </tr>
+    <tr>
+        <td>外语</td>
+        <td>100</td>
+    </tr>
+</table>
+<hr/>
+<table align="center" width="500" border="1" cellspacing="0">
+    <caption>学生表格</caption>
+    <thead style="background: greenyellow">
+        <tr>
+            <td>姓名</td>
+            <td>成绩</td>
+        </tr>
+    </thead>
+    <tbody style="background: yellow">
+        <tr>
+            <td>张三</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>92</td>
+        </tr>
+         <tr>
+            <td>王二麦子</td>
+            <td>90</td>
+        </tr>
+    </tbody>
+    <tfoot style="background: aqua">
+         <tr>
+            <td>合计</td>
+            <td>270</td>
+        </tr>
+    </tfoot>
+</table>
+<hr/>
+<table align="center" width="500" border="1" cellspacing="0">
+    <caption>学生表格</caption>
+    <thead style="background: greenyellow">
+        <tr>
+            <td>姓名</td>
+            <td>成绩</td>
+        </tr>
+    </thead>
+    <tbody style="background: yellow">
+        <tr>
+            <td width="50%">张三</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>92</td>
+        </tr>
+         <tr>
+            <td>王二麦子</td>
+            <td>90</td>
+        </tr>
+    </tbody>
+    <tfoot style="background: aqua">
+         <tr>
+            <td>合计</td>
+            <td>270</td>
+        </tr>
+    </tfoot>
+</table>
+</body>
+</html>

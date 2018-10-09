@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+    <!--action表示表单要提交到哪里去 目的地  就是一个url地址或者网页
+        method表示提交的方式  一种get  一种post
+        input标签是表单项  type指定项的类型
+            text 表示文本信息
+            password表示密码
+            submit 提交表单  当提交表单时action的地址被触发
+            reset 重置
+            button 按钮功能
+            image 图片按钮  具有提交表单的功能
+            radio 单选按钮  只有name相同的  单选按钮 为一组 一组只能选一个
+            checkbox 多选按钮
+            file  文件
+            hidden 隐藏域
+      -->
+
+    <form action="01hello.html" method="post">
+        <input type="hidden" name="id" value="23"/>
+        账号:<input type="text" name="username"/><br>
+        密码:<input type="password" name="password"/><br>
+        <!--checked默认被选中-->
+        性别：<input type="radio" name="sex" value="男" checked/>男
+        <input type="radio" name="sex" value="女"/>女<br>
+        爱好：<input type="checkbox" name="hobbies" value="music">音乐
+        <input type="checkbox" name="hobbies" value="reading">阅读
+        <input type="checkbox" name="hobbies" value="movie">电影
+        <input type="checkbox" name="hobbies" value="game">游戏<br>
+        照片：<input type="file" name="myphoto"><br>
+        科目：
+            <!--multiple表示可以多选 selected表示默认被选中-->
+            <select name="subject">
+                <option value="0">python</option>
+                 <option value="1" selected>html</option>
+                 <option value="2">mysql</option>
+            </select><br>
+        <input type="button" value="add"/>
+
+        <input type="image" src="image/mm.jpg" width="100" height="30"/>
+        <input type="reset" value="reset"/><input type="submit" value="login"/>
+    </form>
+</body>
+</html>

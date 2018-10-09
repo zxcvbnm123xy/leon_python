@@ -1,0 +1,1817 @@
+Index: Demo/01hello.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/01hello.html	(date 1538965737000)
++++ Demo/01hello.html	(date 1538965737000)
+@@ -0,0 +1,15 @@
++<!-- 这个符号是html注释 -->
++<!-- html标签表示是一个html文档内容，内容包裹在开始标签和结束标签中 -->
++<html>
++    <!-- head标签标示的定义网页的头部信息 -->
++    <head>
++	<!-- title表示一个标题信息 -->
++	    <title>第一个网页程序</title>
++        <!--设置编码-->
++        <meta charset="utf-8">
++    </head>
++    <!-- body用于定义网页的主体内容 -->
++    <body>
++    	hello world
++    </body>
++</html>
+\ No newline at end of file
+Index: Demo/02h.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/02h.html	(date 1538966734000)
++++ Demo/02h.html	(date 1538966734000)
+@@ -0,0 +1,17 @@
++<!--DOCTYPE表示文档类型  DOCTYPE html表示的是一个h5网页-->
++<!DOCTYPE html>
++<!-- lang是html标签的一个属性 lang是用于设定语言的属性-->
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>标题标签</title>
++</head>
++<body>
++    <h1>标题</h1>
++    <h2>标题</h2>
++    <h3>标题</h3>
++    <h4>标题</h4>
++    <h5>标题</h5>
++    <h6>标题</h6>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/03font.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/03font.html	(date 1538967011000)
++++ Demo/03font.html	(date 1538967011000)
+@@ -0,0 +1,10 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>font标签</title>
++</head>
++<body>
++    <h1><font color="red" size="50">中国</font></h1>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/04p.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/04p.html	(date 1538967586000)
++++ Demo/04p.html	(date 1538967586000)
+@@ -0,0 +1,15 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>段落标签</title>
++</head>
++<body>
++    <p>我与父亲不相见已二年余了，我最不能忘记的是他的背影。</p>
++    <p>那年冬天，祖母死了，父亲的差使1也交卸了，正是祸不单行的日子。
++        我从北京到徐州，打算跟着父亲奔丧回家。到徐州见着父亲，看见满院狼藉
++        的东西，又想起祖母，不禁簌簌地流下眼泪。父亲说：“事已如此，不必难过，好在天无绝人之路！”</p>
++    <p>回家变卖典质，父亲还了亏空；又借钱办了丧事。这些日子，家中光景5很是惨澹，
++        一半为了丧事，一半为了父亲赋闲6。丧事完毕，父亲要到南京谋事，我也要回北京念书，我们便同行。</p>
++ </body>
++</html>
+\ No newline at end of file
+Index: Demo/05practice.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/05practice.html	(date 1538979927000)
++++ Demo/05practice.html	(date 1538979927000)
+@@ -0,0 +1,17 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>练习</title>
++</head>
++<body>
++        <center>
++            <h1>春晓</h1>
++            <h3><font color="blue" size="12">-----孟浩然</font></h3>
++            <p id="sp">春眠不觉晓，</p>
++            <p>处处闻啼鸟。</p>
++            <p>夜来风雨声，</p>
++            <p>花落知多少。</p>
++        </center>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/06img.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/06img.html	(date 1538970958000)
++++ Demo/06img.html	(date 1538970958000)
+@@ -0,0 +1,19 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>图片标签</title>
++</head>
++<body>
++    <!--src属性用于指定图片的位置
++            如果图片文件和html文件在同一个目录下，那么直接引用即可src="mm.jpg"
++            如果图片文件存放的目录和html文件在同一个目录下 那么通过引用直接引用目录 来找图片
++            如果图片文件存放的目录和html文件存放的目录在同一个目录下
++            那么通过找html文件的上一级目录(..) 来找存放图片的目录引用
++            src还可以直接指定一个url地址
++        width用于指定图片的宽度
++        height用于指定图片的高度
++    -->
++    <img src="image/mm.jpg" width="300" height="200">
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/07center.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/07center.html	(date 1538971081000)
++++ Demo/07center.html	(date 1538971081000)
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>居中</title>
++</head>
++<body>
++    <center>
++        <h1>春晓</h1>
++    </center>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/08hr.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/08hr.html	(date 1538971454000)
++++ Demo/08hr.html	(date 1538971454000)
+@@ -0,0 +1,18 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>hr</title>
++</head>
++<body>
++        <center>
++            <h1>春晓</h1>
++            <!-- width默认是整个屏幕的宽度 ，size线的厚度-->
++            <hr color="red" width="500" size="10"/>
++            <p>春眠不觉晓，</p>
++            <p>处处闻啼鸟。</p>
++            <p>夜来风雨声，</p>
++            <p>花落知多少。</p>
++        </center>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/09br.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/09br.html	(date 1538978650000)
++++ Demo/09br.html	(date 1538978650000)
+@@ -0,0 +1,13 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>br标签</title>
++</head>
++<body>
++那年冬天，祖母死了，父亲的差使1也交卸了，正是祸不单行的日子。<br/>
++我从北京到徐州，打算跟着父亲奔丧回家。<br/>到徐州见着父亲，看见满院狼藉 的东西，
++<hr>
++又想起祖母，不禁簌簌地流下眼泪。<br/>父亲说：“事已如此，不必难过，好在天无绝人之路！”
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/10a.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/10a.html	(date 1538989118000)
++++ Demo/10a.html	(date 1538989118000)
+@@ -0,0 +1,38 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>超链接</title>
++</head>
++<body>
++    <!-- href 指定要跳转的页面-->
++    <a href="http://www.baidu.com">百度</a><br/>
++    <a href="http://www.baidu.com" target="_parent">百度</a><br/>
++    <!-- target属性 指定跳转后怎么显示
++            _blank 新打开一个标签页显示
++            _self 在当前的标签页显示  默认显示
++            _top 在顶层显示
++            _parent 在父窗口上显示
++    -->
++    <a href="http://www.sina.com.cn" target="_blank">新浪</a><br/>
++    <!--跳转到本地的网页-->
++    <a href="04p.html">p标签</a><br/>
++    <!--锚链接 #id 来表示-->
++    <a href="#spring">春</a><br/>
++    <a href="05practice.html#sp">春晓</a><br/>
++    <!--功能性链接-->
++    <a href="mailto:261042465@qq.com">发送邮件</a><br/>
++    <img src="image/mm.jpg"><br/>
++    <img src="image/mm.jpg"><br/>
++    <img src="image/mm.jpg"><br/>
++    <img src="image/mm.jpg"><br/><img src="image/mm.jpg"><br/><img src="image/mm.jpg"><br/><img src="image/mm.jpg"><br/>
++
++    <p id="spring">我与父亲不相见已二年余了，我最不能忘记的是他的背影。</p>
++    <p>那年冬天，祖母死了，父亲的差使1也交卸了，正是祸不单行的日子。
++        我从北京到徐州，打算跟着父亲奔丧回家。到徐州见着父亲，看见满院狼藉
++        的东西，又想起祖母，不禁簌簌地流下眼泪。父亲说：“事已如此，不必难过，好在天无绝人之路！”</p>
++    <p>回家变卖典质，父亲还了亏空；又借钱办了丧事。这些日子，家中光景5很是惨澹，
++        一半为了丧事，一半为了父亲赋闲6。丧事完毕，父亲要到南京谋事，我也要回北京念书，我们便同行。</p>
++
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/11ol.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/11ol.html	(date 1538980486000)
++++ Demo/11ol.html	(date 1538980486000)
+@@ -0,0 +1,16 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>有序列表</title>
++</head>
++<body>
++    <!-- type指定显示的列表类型 是数字还是字母 还是其他的-->
++    <ol type="I">
++        <li>html简介</li>
++        <li>html发展历史</li>
++        <li>html的应用</li>
++        <li>html的具体内容</li>
++    </ol>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/12ul.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/12ul.html	(date 1538980761000)
++++ Demo/12ul.html	(date 1538980761000)
+@@ -0,0 +1,21 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>无序列表</title>
++</head>
++<body>
++    <!--
++        type的取值
++        disc
++        square
++        circle
++    -->
++    <ul type="square">
++        <li>html简介</li>
++        <li>html发展历史</li>
++        <li>html的应用</li>
++        <li>html的具体内容</li>
++    </ul>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/13dl.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/13dl.html	(date 1538981050000)
++++ Demo/13dl.html	(date 1538981050000)
+@@ -0,0 +1,17 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>dl标签</title>
++</head>
++<body>
++    <dl>
++        <dt>html</dt>
++        <dd>html是一个超文本标记语言</dd>
++    </dl>
++    <dl>
++        <dt><img src="image/mm.jpg"></dt>
++        <dd>这个一个美女</dd>
++    </dl>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/14background.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/14background.html	(date 1538981628000)
++++ Demo/14background.html	(date 1538981628000)
+@@ -0,0 +1,15 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>背景</title>
++</head>
++<!--
++    bgcolor 背景颜色 可以直接颜色的英文名yellow
++            也可以给颜色值RGB#FF00FF
++
++<body bgcolor="rgb(255,255,0)">-->
++<body background="image/mm.jpg">
++    <font size="30" color="red">美女</font>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/15table.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/15table.html	(date 1538985816000)
++++ Demo/15table.html	(date 1538985816000)
+@@ -0,0 +1,150 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>table标签</title>
++</head>
++<body>
++<table>
++    <tr>
++        <td>姓名</td>
++        <td>成绩</td>
++    </tr>
++    <tr>
++        <td>张三</td>
++        <td>88</td>
++    </tr>
++    <tr>
++        <td>李四</td>
++        <td>92</td>
++    </tr>
++</table>
++<hr/>
++<!-- 设置表格的相关属性-->
++<table width="500" align="center" border="1">
++    <tr>
++        <td colspan="2" align="center">学生成绩信息</td>
++    </tr>
++    <tr>
++        <td>姓名</td>
++        <td>成绩</td>
++    </tr>
++    <tr>
++        <td>张三</td>
++        <td>88</td>
++    </tr>
++    <tr>
++        <td>李四</td>
++        <td>92</td>
++    </tr>
++</table>
++<hr/>
++<table width="500" align="center" border="1" cellspacing="0">
++    <tr>
++        <td rowspan="3">科目</td>
++        <td>语文</td>
++        <td>89</td>
++    </tr>
++    <tr>
++        <td>数学</td>
++        <td>95</td>
++    </tr>
++    <tr>
++        <td>外语</td>
++        <td>100</td>
++    </tr>
++</table>
++<hr/>
++<table width="500" align="center" border="1" cellspacing="0" cellpadding="0">
++    <tr>
++        <td rowspan="3">科目</td>
++        <td>语文</td>
++        <td>89</td>
++    </tr>
++    <tr>
++        <td>数学</td>
++        <td>95</td>
++    </tr>
++    <tr>
++        <td>外语</td>
++        <td>100</td>
++    </tr>
++</table>
++<hr/>
++<table width="500" align="center" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
++    <tr>
++        <td rowspan="3">科目</td>
++        <td>语文</td>
++        <td>89</td>
++    </tr>
++    <tr>
++        <td>数学</td>
++        <td>95</td>
++    </tr>
++    <tr>
++        <td>外语</td>
++        <td>100</td>
++    </tr>
++</table>
++<hr/>
++<table align="center" width="500" border="1" cellspacing="0">
++    <caption>学生表格</caption>
++    <thead style="background: greenyellow">
++        <tr>
++            <td>姓名</td>
++            <td>成绩</td>
++        </tr>
++    </thead>
++    <tbody style="background: yellow">
++        <tr>
++            <td>张三</td>
++            <td>88</td>
++        </tr>
++        <tr>
++            <td>李四</td>
++            <td>92</td>
++        </tr>
++         <tr>
++            <td>王二麦子</td>
++            <td>90</td>
++        </tr>
++    </tbody>
++    <tfoot style="background: aqua">
++         <tr>
++            <td>合计</td>
++            <td>270</td>
++        </tr>
++    </tfoot>
++</table>
++<hr/>
++<table align="center" width="500" border="1" cellspacing="0">
++    <caption>学生表格</caption>
++    <thead style="background: greenyellow">
++        <tr>
++            <td>姓名</td>
++            <td>成绩</td>
++        </tr>
++    </thead>
++    <tbody style="background: yellow">
++        <tr>
++            <td width="50%">张三</td>
++            <td>88</td>
++        </tr>
++        <tr>
++            <td>李四</td>
++            <td>92</td>
++        </tr>
++         <tr>
++            <td>王二麦子</td>
++            <td>90</td>
++        </tr>
++    </tbody>
++    <tfoot style="background: aqua">
++         <tr>
++            <td>合计</td>
++            <td>270</td>
++        </tr>
++    </tfoot>
++</table>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/16form.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/16form.html	(date 1538987491000)
++++ Demo/16form.html	(date 1538987491000)
+@@ -0,0 +1,48 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>表单</title>
++</head>
++<body>
++    <!--action表示表单要提交到哪里去 目的地  就是一个url地址或者网页
++        method表示提交的方式  一种get  一种post
++        input标签是表单项  type指定项的类型
++            text 表示文本信息
++            password表示密码
++            submit 提交表单  当提交表单时action的地址被触发
++            reset 重置
++            button 按钮功能
++            image 图片按钮  具有提交表单的功能
++            radio 单选按钮  只有name相同的  单选按钮 为一组 一组只能选一个
++            checkbox 多选按钮
++            file  文件
++            hidden 隐藏域
++      -->
++
++    <form action="01hello.html" method="post">
++        <input type="hidden" name="id" value="23"/>
++        账号:<input type="text" name="username"/><br>
++        密码:<input type="password" name="password"/><br>
++        <!--checked默认被选中-->
++        性别：<input type="radio" name="sex" value="男" checked/>男
++        <input type="radio" name="sex" value="女"/>女<br>
++        爱好：<input type="checkbox" name="hobbies" value="music">音乐
++        <input type="checkbox" name="hobbies" value="reading">阅读
++        <input type="checkbox" name="hobbies" value="movie">电影
++        <input type="checkbox" name="hobbies" value="game">游戏<br>
++        照片：<input type="file" name="myphoto"><br>
++        科目：
++            <!--multiple表示可以多选 selected表示默认被选中-->
++            <select name="subject">
++                <option value="0">python</option>
++                 <option value="1" selected>html</option>
++                 <option value="2">mysql</option>
++            </select><br>
++        <input type="button" value="add"/>
++
++        <input type="image" src="image/mm.jpg" width="100" height="30"/>
++        <input type="reset" value="reset"/><input type="submit" value="login"/>
++    </form>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/17div.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/17div.html	(date 1538988476000)
++++ Demo/17div.html	(date 1538988476000)
+@@ -0,0 +1,11 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>div</title>
++</head>
++<body>
++    <div>你好</div>
++    <div>hello</div>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/20base.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/20base.html	(date 1538989760000)
++++ Demo/20base.html	(date 1538989760000)
+@@ -0,0 +1,12 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <!--默认在超链接前加一个url  通常base设置都是当前项目的根路径-->
++    <base href="http://pic30.nipic.com/"/>
++    <meta charset="UTF-8">
++    <title>base</title>
++</head>
++<body>
++    <a href="20130605/7447430_151725918000_2.jpg">美女</a>
++</body>
++</html>
+\ No newline at end of file
+Index: Demo/21entity.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Demo/21entity.html	(date 1538990053000)
++++ Demo/21entity.html	(date 1538990053000)
+@@ -0,0 +1,15 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>实体</title>
++</head>
++<body>
++你&nbsp;&nbsp;&nbsp;&nbsp;好&copy;&gt;&lt;&quot;
++<strong>加粗</strong>
++<label>ttt</label>
++<span>span标签</span>
++<u>ttt</u>
++<i>ttt</i>
++</body>
++</html>
+\ No newline at end of file
+Index: first/homework/test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- first/homework/test.py	(revision 755b69bb2eb1882a54bd1b5f5b3c8c4a71bac539)
++++ first/homework/test.py	(date 1538142437943)
+@@ -1,409 +1,0 @@
+-# s = "abcdefg"
+-# x = 0
+-# print("a" + "b")
+-# print('abc'> 'xyz')
+-# # x = 3
+-# # print("ab" in "abcd")
+-# # x += 6
+-# # print(int(4**0.5))
+-#
+-# #练习 将下面列表在中tom和jerry元素位置对调
+-# names=["tom","jerry","kate",1,3,[4,5]]
+-# names[0]=names[1]
+-# names[1]="tom"
+-# print(names)
+-#
+-# #新定义一个names_new ,画出内存图
+-# names=["tom","jerry","kate",1,3,[4,5]]
+-# names_new = names
+-# print(names_new)
+-#
+-# li=["a","b","c","d","e"]
+-# #1.添加
+-# #+合并：新创建列表进行合并
+-# #append对列表中的元素进行追加
+-# li.append("z") #注意使用的时候append的返回值是none
+-# print(li)
+-#
+-# #字符串的相关方法都不是原地修改，都是新创建字符串
+-# # s="abc"
+-# # print(s.replace("a","d"))
+-# # print(s)
+-# print(li+["z"])
+-# print(li)
+-#
+-# #插入元素，可以向列表中的index位置插入object参数
+-# #li.insert(index,object),insert之后的返回值也是none
+-# li=["a","b","c","d","e"]
+-# li.insert(2,"z")
+-# print(li)
+-#
+-# #练习，使用insert能不能达到append的效果
+-# li.append("happy")
+-# print(len(li))
+-# li.insert(len(li),"happy")
+-# print(li)
+-#
+-# #2.删除
+-# #（1）pop
+-# # li.pop(index) 可以删除index指定位置的元素 一次只能删除一个
+-# #pop的返回值是删除元素的内容
+-# #index如果省略 会默认删除列表中的最后元素
+-# li.pop(-1)
+-# print(li)
+-# print(li.pop(1))
+-# li.pop()
+-# print(li)
+-#
+-# #(2) remove 根据传入参数的内容删除指定元素
+-# # li.remove("c")
+-# # print(li)
+-# # li.remove()
+-# #删除的内容不存在，会报错
+-# #一次删一个 只删除第一次见到的元素
+-# li=["a","b","c","d","e","a"]
+-# li.remove("a")
+-# print(li)
+-#
+-# #3.检索
+-# # li.index("要检索的内容"，起始位置，终止位置)
+-# #包含起始，不包含终止
+-# print(li.index("d"))
+-# #内容不存在，会报错
+-#
+-# #4.统计
+-# li=["a","b","y","f","e","t"]
+-# print(li.count("a"))
+-#
+-# #5.反向:原地反向
+-# li.reverse()
+-# print(li)
+-#
+-# #6.排序sort
+-# #reverse参数:默认升序F，
+-# #降序reverse=True
+-# li.sort()
+-# print(li)
+-# li.sort(reverse=True)
+-# print(li)
+-#
+-# #降序可以通过先调用sort升序排序，在调用reverse反向
+-#
+-# #7.列表的复制
+-# #（1）赋值
+-# #（2）copy方法
+-# #（3）切片
+-# #（4）copy包下的copy和deepcopy
+-# #（5）*
+-# li=[1,2,3,[4,5]]
+-# li1=li
+-# print(id(li),id(li1))
+-# li[0]="new"
+-# print(li,li1)
+-#
+-# #使用列表的copy方法进行复制
+-# #只负责复制当前的列表对象（只复制第一层）
+-# li=[1,2,3,[4,5]]
+-# li2=li.copy()
+-# print(id(li),id(2))
+-#
+-#
+-# #一，元组的创建
+-# #定义元组:元组名（元素，）
+-# #元组的元素不能进行修改
+-# a=(1,2,3)
+-# print(type(a),a)
+-# b=1,2,3
+-# print(type(b),b)
+-#
+-# #二，元组的操作
+-# #1.运算符
+-# #跟列表一样 + * in not in is is not
+-# a=(1,2)
+-# b=(3,4)
+-# print(a+b)
+-#
+-# print(a*3)
+-#
+-# #元素的合并和重复
+-#
+-# print(1 in a)
+-# print(1 in ((1,2),3,4))
+-#
+-# #is ==
+-# a=(1,2,3)
+-# b=(1,2,3,)
+-# c=a
+-# print(id(a),id(b),id(c))
+-#
+-# #2.索引、切片
+-# a=(1,2,3)
+-# print(a[1])
+-# print(a[1:3])
+-#
+-# #如果元组中的元素是可变类型，对于可变类型是可以修改的
+-# a=([1,2,3],4,5,6)
+-# a[0][0]="new"
+-# print(a)
+-#
+-# #三、相关方法
+-# a=(1,2,3,1,2,3,4,1,2,1)
+-# #统计
+-# print(a.count(1))
+-# #返回某一个元素的位置
+-# print(a.index(1))
+-#
+-# print(4%10)
+-#
+-# # 常用字符
+-# # ascii
+-# #  gb2312
+-# #  big5 繁体
+-# # GBK：亚洲的支持比如中文，韩文，日文，大字符集
+-# # UNicode字符集（定长存储）：将所有的语言统一到一套编码中，2-4个自己写
+-# # 包括ascii也用两个字节，所以很浪费空间
+-# #  utf-8 字符集（变长储存），英文使用一个字节表示，汉字一般用三个字节
+-# #
+-# # 因为字节和字符串使用的编码集不一样：
+-# # 字节 ascii
+-# #字符串 Unicode 字符集
+-#
+-# print(ord("a"))
+-#
+-# #二、Unicode和utf-8
+-# #1.Unicode
+-# print(ord("中")) #计算机内部其实存的就是20013对应的二进制
+-# print(chr(20013))  #ord 和 chr是可逆的 一个是汉字 一个是二进制
+-#
+-# #0x4e2d 20013对应的16进制
+-# print(hex(20013))
+-#
+-# #对应的Unicode字符集， \u4e2d 取对应的十进制找到十六进制，就是对应的Unicode字符集
+-# print("\u4e2d")
+-#
+-# #2.utf-8字符集
+-# print("中".encode())  #可以直接将字符转换成utf-8的编码集
+-# # b'\xe4\xb8\xad'
+-# print(bin(0xe4),bin(0xb8),bin(0xad))
+-#
+-# # 0b11100100 0b10111000 0b10101101
+-# # unicode      100111000101101
+-#
+-# # 3.在计算机中两个字符集之间的合作关系
+-# # （1）.计算机内存中，统一使用unicode编码（因为unicode的速度快），
+-# # 当需要保存到硬盘或者内存的时候，需要转成utf-8（因为utf-8省资源）
+-# # 五个组成部分 硬盘存储，内存，控制器，计算中心，io
+-# # （2）.浏览网页的时候，服务器也是把动态生成的unicode内容转成utf-8，再传到服务器
+-# #       所以网页看到的编码应该都是utf-8
+-#
+-# # 三、Python中的字节和字符之间的转换
+-# # 在python 中 字节：utf-8  字符串：unicode
+-#
+-# # 字符串（unicode）---->字节（utf-8） 编码encode
+-# s="中国"
+-# print(s.encode())  #encoding 参数不设置，默认utf-8
+-# print(s.encode(encoding="gb2312"))
+-#
+-# # 字节（utf-8）------>字符串（unicode） 解码decode
+-# b=b'\xe4\xb8\xad\xe5\x9b\xbd'
+-# print(b.decode())
+-# b1=b'\xd6\xd0\xb9\xfa'
+-# print(b1.decode(encoding="gb2312"))
+-#
+-# # day=int(input("请输入星期几："))
+-# # print("今天是周{}".format(day if 1<=day<=5 else "末"))
+-# #
+-# # x=int(input("请输入0或1："))
+-# # print("男的" if x==0 else "女的")
+-#
+-# # 断言：断定某些语句是都正确
+-# # 语法：一旦表达式返回False，程序回报AssertionError，程序被停止，无法继续
+-# """
+-# assert 表达式，错误信息
+-# """
+-# # assert 1>6,"谁告诉你的？"
+-#
+-# # 1+2+...+100
+-# x=1
+-# s=0
+-# # while x<=100:
+-# #     s+=x
+-# #     x+=1
+-# # print(s)
+-# for x in  range(1,101,2):
+-#     s+=x
+-#
+-# print(s)
+-#
+-# #练习：使用索引实现列表中元素的对调
+-# #  使用索引替换所有元素为new
+-li=["a","b","c",[1,2]]
+-li[0],li[1],li[2],li[3]=li[1],li[0],li[3],li[2]
+-print(li)
+-
+-for i in range(len(li)):
+-    li[i]="new"
+-print(li)
+-
+-#练习，希望删除或者插入元素使用切片完成
+-a=["aaa","bbb","ccc","ddd","eee"]
+-a[1:1]=["fff"]
+-a[1:1]=[]
+-print(a)
+-
+-# 练习：
+-import copy
+-a=["aaa","bbb","ccc","ddd","eee"]
+-b=a
+-c=a[:]
+-d=copy.deepcopy(a)
+-a.sort()
+-#
+-print(a,b,c,d)
+-
+-
+-
+-li=[10,20,80,77,55,7,8]
+-
+-min=0
+-for i in range(len(li)):
+-    if i<li[min]:
+-        min=i
+-    li[0],li[min]=li[min],li[0]
+-print(li)
+-
+-"""
+-第七章 字典和集合
+-"""
+-#字典
+-#映射类型数据：根据"键" 映射到“值”
+-names=["tom","jerry","kate"]
+-scores=[100,80,77]
+-#使用字典，形成，名字-成绩的对照表
+-#名字---key
+-#成绩--value值
+-
+-#字典的原理：
+-#哈希表（散列表）：这种表能够根据键值对直接进行访问的数据结构
+-#通过吧key和value映射到表一个位置记录上，相当于使用哈希函数
+-#将key值映射成唯一的哈希code
+-#将哈希code跟value关联。
+-
+-#如果key在映射成hashcode的时候，
+-# 结果是重复的，会采用链接法或开放寻址法（python）
+-#一直找到没有重复的唯一值
+-
+-#一、字典的定义
+-#格式：{kay：value，key2：value...}
+-#格式：dict（kay=value，key2=value...）
+-# 如果定义字典时出现重复的值，使用后面的value覆盖前面的value值
+-"""
+-#字典的特点
+-1，字典中的键值对是无序存储
+-2，字典中的key值是不可变数据类型，value不限制
+-3，字典中的key不能重复
+-"""
+-s={"tom":100,"jerry":90,"kate":89,"tom":99}
+-print(s)
+-s1=dict(tom=100,jerry=90,kate=80)
+-print(s1,type(s1))
+-
+-#定义空字典
+-d={}
+-print(len(s),print(len(d)))
+-
+-# 二，字典中key和value的访问和修改
+-#字典不能通过索引访问键值对，因为无序的数据类型
+-#只能通过kay访问值
+-#格式：字典[key](key必须存在)
+-s={"tom":100,"jerry":90,"kate":89}
+-print(s["tom"])
+-
+-#通过key修改值
+-# 格式： 字典[key] (key可以不存在)
+-# 如果key存在：会修改key对应的value
+-# 如果key不存在：会创建key，value键值怼
+-s["tom"]=99
+-print(s)
+-
+-s["tim"]=59
+-print(s)
+-
+-
+-#练习
+-#（1）定义一个全局变量，# 然后在函数内去修改全局变量
+-#（2）在函数内先输出全局变量，输出对应的变量，然后尝试去修改该变量的值
+-#（3）在函数内部将全局变量函数+1
+-#（4） 定义一个全局变量 id 定义一个li=[1,2,3]
+-# 在打印列表所在的内存地址
+-
+-a=100
+-li=[1,2,3]
+-id(li)
+-print(id(li))
+-def q(x,y):
+-    # a+=1
+-    x+=1
+-    li[0]+=1
+-
+-q(a,li)
+-print(a,li)
+-print(id(li))
+-
+-# L---local 局部
+-# E---enclosing-----外围
+-# G---global-----全局
+-# B---bulidins-----内检
+-
+-#访问：读取，会严格按照LEGB的顺序
+-#修改和删除：
+-    #修改:先从最小的域开始查找， 如果找到则修改，如果找不到不会继续往上找
+-            # 如果找不到不会继续往上找，而是直接在当前最小的域新建一个
+-#           为了避免不小心污染全局变量，起了一个跟全局变量名一样的变量
+-#    删除：只能删除自己变量空间的，不能删除其他变量空间的
+-#
+-
+-#对于再聚不命名空间中希望修改全局变量或者外围变量:使用global和noglobal关键字
+-#在局不命名空间中修改全局变量：global
+-y=2
+-def g():
+-    # print(y)
+-    global y #解决需要声明global
+-    y=3
+-    print(y)
+-g()
+-
+-#在局不命名空间中修改外围变量：nolocal
+-def out():
+-    x=1
+-    def inner():
+-        nonlocal x
+-        x=2
+-    inner()
+-    print(x)
+-
+-out()
+-
+-# n的阶乘
+-def s(n):
+-    if n==1:
+-        return 1
+-    else:
+-        return s(n-1)*n
+-
+-from toolz import curry
+-@curry
+-def power(x,y):
+-    return x**y
+-times=power(3)
+-print(times(9))
+-
+-import functools
+-c=functools.partial(power,y=3)
+-print(c(10))
+-
+-import random
+-
+-stu = ""
+-stu = "".join(str(i) for i in random.sample(range(0, 9), 6))
+-print(stu)
+\ No newline at end of file
+Index: python1808real/day12/day12-1-package.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python1808real/day12/day12-1-package.py	(revision 755b69bb2eb1882a54bd1b5f5b3c8c4a71bac539)
++++ python1808real/day12/day12-1-package.py	(date 1538136529341)
+@@ -33,7 +33,7 @@
+ 
+ # 4. __all__变量
+ # all是一个列表，可以在列表下加入可以导入的名字
+-from day12 import *
++from  day12 import *
+ print(x)
+ print(y)
+ 
+Index: python1808real/day21/day20homework.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python1808real/day21/day20homework.py	(revision 755b69bb2eb1882a54bd1b5f5b3c8c4a71bac539)
++++ python1808real/day21/day20homework.py	(date 1538183000304)
+@@ -35,10 +35,6 @@
+ #     print("执行的结果是={}".format(result))
+ #     print("执行的时间={}".format(end-start))
+ 
+-
+-
+-
+-
+ # 2. 尝试使用concurrent.futures模块的进程池完成累加的案例（计算密集型和IO密集型）
+ from concurrent.futures import ProcessPoolExecutor,as_completed
+ #ProcessPoolExecutor 上下文管理器，使用with语句体
+@@ -56,4 +52,3 @@
+     sum_processExecutor(10000000,20000000)
+     end=time.time()
+     print("执行的时间={}".format(end-start))
+-
+Index: python1808real/__init__.py
+===================================================================
+--- python1808real/__init__.py	(revision 755b69bb2eb1882a54bd1b5f5b3c8c4a71bac539)
++++ python1808real/day22/__init__.py	(date 1538182875216)
+@@ -1,0 +1,0 @@
+Index: python1808real/day22/day21homework.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python1808real/day22/day21homework.py	(date 1538185980563)
++++ python1808real/day22/day21homework.py	(date 1538185980563)
+@@ -0,0 +1,121 @@
++# 1.携程对象需要每次调用的时候，先激活
++# 装饰器：扩展函数功能
++# （1）装饰器（闭包函数） （2）调用装饰器，在被装饰函数上面@
++# def alive(funcname):
++#     def inner(*args,**kwargs):
++#         g=funcname(*args,**kwargs) # 声称其对象
++#         g.send(None)
++#         return g
++#     return inner
++#
++# @alive
++# def gen():
++#     print("协程开始")
++#     while True:
++#         x=yield
++#         print("x={}".format(x))
++# g=gen()
++# # next(g)
++# g.send(10)
++# g.send(20)
++
++# 2.小狗吃骨头的问题，使用协程实现，一共有两只小狗
++# 一个生产者，当骨头数>5的时候，小狗可以啃骨头
++# 但是每一次只有一只小狗吃骨头，随机选择小狗
++import random,time
++# def consume(name):
++#     print("{}要开始啃骨头".format(name))
++#     while True:
++#         bone=yield
++#         print("{}正在啃{}骨头".format(name,bone))
++#         time.sleep(0.2)
++#         li.remove(bone)
++#
++# li=[]
++# n=0
++# dog1=consume("tome")
++# dog2=consume("jerry")
++# dog1.send(None)
++# dog2.send(None)
++#
++# while True:
++#     n+=1
++#     li.append("骨头{}".format(n))
++#     time.sleep(1)
++#     print("已生产骨头{}".format(n))
++#     if len(li)>5:
++#         dog=random.choice([dog1,dog2])
++#         dog.send(random.choice(li))
++#         # dog2.send(random.choices(li))
++
++# 3.使用子生成器，委派生成器获得多组数据的平方和
++# yield from 的生成器是委派生成器
++# 委派生成器可以调用子生成器，委派生成器可以获得子生成器返回值的内容
++# 子生成器
++# [[3,4,5],[5,6],[7,8,9,10]]
++# def powsum():
++#     s=0
++#     while True:
++#         i=yield
++#         if i is None:
++#             break
++#         s+=i**2
++#     return s
++#
++# # 委派生成器
++# def grouper(li):
++#     while True:
++#         r=yield from powsum()
++#         li.append(r)
++#
++# # 客户端
++# data=[[3,4,5],[5,6],[7,8,9,10]]
++#
++# # 调用委派生成器，产生委派生成器对象
++# li=[]
++# for i in data:
++#     coroutine=grouper(li)
++#
++#     # 激活委派生成器(可以同时激活委派生成器和子生成器)
++#     # coroutine.send(None)
++#     next(coroutine)
++#     for j in i :
++#         coroutine.send(j)
++#     coroutine.send(None)
++# print(li)
++
++# 4.threadpool 得到线程返回值的方法
++def task(index):
++    print("任务{}开始执行".format(index))
++    time.sleep(0.5)
++    return "success{}".format(index)
++# threadpool 线程获得返回值的方式，需要设置回调函数
++# 调用回调函数makeRequests，指定callback=回调函数名字
++def callback(request,result):
++    print("线程返回值{}".format(result))
++
++import threadpool
++pool=threadpool.ThreadPool(5)
++requests=threadpool.makeRequests(task,range(10),callback=callback)
++for i in requests:
++    pool.putRequest(i)
++pool.wait()
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: python1808real/day22/day22-1-coroutine.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python1808real/day22/day22-1-coroutine.py	(date 1538193490225)
++++ python1808real/day22/day22-1-coroutine.py	(date 1538193490225)
+@@ -0,0 +1,194 @@
++"""
++三、协程
++"""
++# 案例：仿真出租车系统：出库，载客，卸客，载客，卸客，载客，卸客，回家
++# 使用协程实现，一个出租车是一个协程，多个携程并发
++"""
++分析：
++1.一个出租车，出库，N次载客/卸客，回家
++2.如果是多个出租车，每个出租车都有自己的时间轴，同时所有的出租车都有统一一个总时间
++"""
++# 1.1号出租车 ==出库==
++# 2 2号出租车 ==出库==
++# 5 1豪车     ==载客==
++# 7 一号车    ==卸客==
++# 命名元祖
++import collections
++# Event=collections.namedtuple("Event","time,texiNum,action")
++# trips 载客的次数
++# texi出租车编号
++# start_time 初试时间
++# send的参数时yield表达式的内容，希望每次的时间都是通过send传入
++# 考虑一台车
++# def taxi_process(texiNum,tripsNums,start_time=0):
++#     time=yield Event(start_time,texiNum,"==出库==")
++#
++#     for i in range(tripsNums):
++#         time = yield Event(time,texiNum,"==载客==")
++#         time = yield Event(time,texiNum,"==卸客==")
++#     yield Event(time,texiNum,"==回家==")
++#
++# if __name__=="__main__":
++#     # 1号出租车，载客一次，0点开始出库
++#     t1=taxi_process(1,1)
++#
++#     # 激活
++#     a=next(t1)
++#     print(a)   # 出库
++#
++#     # 第一次载客,传入的时间=上一次的时间+随机数（目前先自己写）
++#     b=t1.send(a.time+5)
++#     print(b)  #  第一次载客
++#
++#     # 第一次卸客
++#     c=t1.send(b.time+8)
++#     print(c)  # 第一次卸客
++#
++#     # 回家
++#     d=t1.send(c.time+10)
++#     print(d)
++
++# 多台出租车
++"""
++1.三台车
++t1=taxi_process(1,3,0）
++t2=taxi_process(2,6,2）
++t3=taxi_process(3,10,5）
++
++2.三台车（三个协程对象）
++
++3.要指定任务执行的时间表（优先队列）
++
++4.当执行完一次操作（send），要继续讲该车的下一次时间加入时间列表
++
++"""
++Event=collections.namedtuple("Event","time,texiNum,action")
++def taxi_process(texiNum,tripsNums,start_time=0):
++    time=yield Event(start_time,texiNum,"==出库==")
++
++    for i in range(tripsNums):
++        time = yield Event(time,texiNum,"==载客==")
++        time = yield Event(time,texiNum,"==卸客==")
++    yield Event(time,texiNum,"==回家==")
++
++import queue,random
++class SimulatTaxi:
++    def __init__(self,texis):
++        # texis字典，多个协程（3台车）的字典
++        self.texis=texis
++        # events事件的时间表（优先队列）
++        self.events=queue.PriorityQueue()
++    def run(self):
++        # 激活
++        for k,v in self.texis.items():
++            leaveEvent=next(v)
++            # 把事件放入时间表，不是直接执行，最后的执行是按照时间表中的顺序执行的
++            self.events.put(leaveEvent)
++
++        while True:
++            # 如果字典中所有车都回家（没有车了）break
++            if self.events.empty():
++                print("计算机仿真结束")
++                break
++            # 获取时间表中的第一个值get
++            opertime,texinum,action=self.events.get()
++            print("执行时间点{}，车租车编号{}，{}".format(opertime,texinum,action))
++
++            # 准备当前车的下一个事件
++            # 当前车的对象（先找到当前车存在self.texis）
++            currenttexi=self.texis[texinum]
++            next_oper_time=opertime+random.randint(1,20)
++            try:
++                nextEvent=currenttexi.send(next_oper_time)
++            except StopIteration:
++                del self.texis[texinum]
++            else:
++                self.events.put(nextEvent)
++
++
++# if __name__=="__main__":
++#     # 1号出租车，载客一次，0点开始出库
++#     texis={1:taxi_process(1, 3, 0),
++#            2:taxi_process(2, 6, 2),
++#            3:taxi_process(3, 10, 5)}
++#
++#     # 定义模拟运行的类，调用类中的实例方法来完成模拟
++#     st=SimulatTaxi(texis)
++#     st.run()
++
++    # # 激活
++    # a=next(t1)
++    # print(a)   # 出库
++    #
++    # # 第一次载客,传入的时间=上一次的时间+随机数（目前先自己写）
++    # b=t1.send(a.time+5)
++    # print(b)  #  第一次载客
++    #
++    # # 第一次卸客
++    # c=t1.send(b.time+8)
++    # print(c)  # 第一次卸客
++    #
++    # # 回家
++    # d=t1.send(c.time+10)
++    # print(d)
++
++# 四、Asyncio模块
++# 1.相关概念和方法：
++# （1）协程函数：Asyncio通过创建协程函数，来创建协程对象。
++#               协程对象执行的时候，需要先将携程对象注册（加入）到【事件循环】
++#               再由事件循环进行调用
++#               【事件循环】：程序开启了一个无线的循环，程序员会将一系列函数加入到事件循环上，
++#                当事件循环运行时，协程才可以运行（可以理解仿了cpu）
++# （2）待执行任务（task任务，future）：待执行任务
++# （3）async关键字：用来定义协程函数的
++# （4）iscorutinfunction：用来判断是否是协程函数。
++# （5）get_event_loop 事件循环
++# （6）await：关键字，用于挂起当前的协程。先走awiat 关键字后面的协程（相当于yeild）
++# （7）sleep：协程的slepp，本身是协程
++# （8）ensunre_future:将协程对象加入到计划函数中执行。
++# （9）loop.run_until_complete:执行方式，直到所有任务结束后才会返回
++# （10）add_done_callback:调用回调函数
++
++# Asyncio模块 3.4版本加入到开发包中 pip insatll 模块
++
++# 2.具体实现
++# （1）定义协程
++# 定义协程需要在函数前家async关键字------协程函数-----调用协程函数后，会产生携程对象
++# import asyncio
++# async def do_some_work():
++#     pass
++#
++# print(asyncio.iscoroutinefunction(do_some_work))
++
++# (2) 协程执行
++"""
++可以用两种方式：
++协程可以自己注册到事件循环来执行
++await的方式等待执行（在另外一x个协程中，调用当前协程，需要通过await）
++"""
++# 方式一：通过在另外一些协程函数中被await调用：
++import asyncio
++async def do_some_work(x):
++    print("开始执行")
++    await asyncio.sleep(x)
++    print("执行结束，x={}".format(x))
++
++print(asyncio.iscoroutinefunction(do_some_work))
++
++# 方式二：注册到事件循环
++# （1）先让程序开启一个无限循环对象，使用get_event_loop,获得事件循环
++loop=asyncio.get_event_loop()
++# （2）将要执行的协程，加入到要执行任务计划中。使用ensure_future()
++# asyncio.ensure_future(要执行的协程名(参数))
++# ensure_future 一次只能将一个协程对象加入到执行计划
++f=asyncio.ensure_future(do_some_work(3))
++
++# （3）需要执行，执行之前，需要先执行执行方式：
++# 方式一般来说run_until_complete(只接受一个协程计划)
++loop.run_until_complete(f)
++
++
++
++
++
++
+Index: python1808real/day23/__init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python1808real/day23/__init__.py	(date 1538959540957)
++++ python1808real/day23/__init__.py	(date 1538959540957)
+@@ -0,0 +1,0 @@
+Index: python1808real/day23/day23-1-design.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python1808real/day23/day23-1-design.py	(date 1538959468075)
++++ python1808real/day23/day23-1-design.py	(date 1538959468075)
+@@ -0,0 +1,344 @@
++"""
++面向对象
++"""
++# 一、OOD和五个原则
++# 编程范式：编程规范，面向过程、面向对象、函数式编程
++# 面向过程：大量函数，按顺序的调用，怎么办
++# 面向对象：对象为单位，谁？谁应该有什么属性、什么行为，调用对象下的属性、行为完成需求
++
++# OOA面向对象的分析法
++# 抽象、封装、继承、分类、聚合、关联.....
++
++# OOD面向对象的设计
++# 遵从的原则达到的设计目标：可扩展、可修改、可替代
++
++# 面向对象的设计要遵从五项原则：SOLID
++# S--单一职责原则
++# O--开放关闭原则
++# L--里氏转换原则
++# I--接口隔离原则
++# D--依赖倒置原则
++#（1）  S--单一职责原则
++# 一个类只做一件事情。
++# ATM  Card:
++# Card:取钱、查询、存钱
++# ATM:取钱（调用card取钱）
++# class Card:
++#     def __init__(self,cardid,name,balance):
++#         self.id=cardid
++#         self.name=name
++#         self.balance=balance
++#     def withdraw(self,money):
++#         self.balance-=money
++# class ATM:
++#     def insertCard(self,card):
++#         self.card=card
++#     def withdraw(self,money):
++#         # self.card.withdraw(money)
++
++#（2） O--开放关闭原则
++# 类、模块、函数对外扩展开放，而对于修改是关闭的。
++# class Milk:
++#     def __init__(self,milk):
++# class MilkTea(Milk):
++#     ....
++# 装饰器：对函数进行扩展，但是对函数内部不进行修改
++
++#（3）L--里氏转换原则
++# 继承关系原则
++# 所有引用父类（基类）地方必须能能够透明的使用其子类对象
++# 子类尽量不去重写父类的方法。
++# （主要属性和方法不去覆盖父类的。如果彻底违反了里氏转换原则，只能说明父子继承关系有问题）
++# 父类相当于是接口规范，子类不应该去破坏父类接口规范。
++# class Card:
++#     pass
++# class CreditCard(Card):
++#     pass
++# class SaveCard(Card):
++#     pass
++# class Teacher:
++#     def __init(self,name,age):
++#         pass
++#     def introduce:
++#         pass
++#     def teach:
++#         pass
++
++# （4）I--接口隔离原则
++# 最小继承原则
++# 不能强迫用户去依赖那些他们不使用的接口。
++# 所有子类都有的方法或者属性应该放在父类中，否则就不应该放在父类中。
++# 自行车，父类自行车：ride()  GPS定位，那么所有的自行车（普通自行）都会带有GPS定位，不合理
++
++#（5）D--依赖倒置原则
++# 高层次模块不应该依赖低层次模块，两者都应该依赖抽象。
++# 当有一些类作为参数传递给另一个类的时候，可以使用父类，这样子类对象也可以当做参数传入。
++# class Iread:
++#     def getConetent(self):
++#         pass
++# class Book(Iread):
++#     def getContent(self):
++#         print("很久很久以前....")
++# class Ipad(Iread):
++#     def getConetent(self):
++#         print("从pad中将故事....")
++# class Mag(Iread):
++#     def getConetent(self):
++#         print("从杂志中将故事....")
++# class Mother:
++#     def tellStory(self, i):
++#         print("妈妈开始讲故事....")
++#         i.getContent()
++
++# m=Mother()
++# b=Book()
++# ma=Mag()
++# m.tellStory(b)
++# m.tellStory(ma)
++
++# 二、设计模式
++# 一套 被反复使用，多人知晓的代码经验的总结
++# GOF四人帮 四个博士根据五个原则，在框架设计中总结出来23种设计模式。
++# 大话设计模式，c++
++
++# 分为三种类型：创建型模式、结构型模式、行为型模式
++# 创建型：工厂模式、抽象工厂、单例模式、原型设计模式、建造者模式
++# 结构型：适配器模式，组合模式，桥接模式、装饰模式，外观、代理模式，享元模式
++# 行为型：迭代器模式，观察者模式，策略模式，访问者模式。。。。。
++
++# 1. 创建型模式：创建者对类的实例化进行了抽象。能够把模块中的对象和创建对象进行分离，
++#    对于需要创建对象他们只需要获得接口，不需要具体创建的内细节。
++# （1）工厂模式
++class A:
++    pass
++class B:
++    pass
++class C:
++    def __init__(self,a,b):
++       pass
++
++# 调用者
++a=A()
++b=B()
++c=C(a,b)
++
++# 工厂模式
++class A:
++    pass
++class B:
++    pass
++class C:
++    def __init__(self,a,b):
++       pass
++class Cfactory:
++    def creatC(self):
++        a=A()
++        b=B()
++        c=C(a,b)
++        return c
++# 调用者
++c=Cfactory()
++
++# 工厂模式的实现：简单工厂，抽象工厂
++# ①简单工厂
++# class Shape:
++#     def __init__(self):
++#         self.brand=None
++# class Circle(Shape):
++#     def draw(self):
++#         print("画圆形")
++# class Rectangle(Shape):
++#     def draw(self):
++#         print("画矩形")
++# class Square(Shape):
++#     def draw(self):
++#         print("画正方形")
++#
++# # circle=Circle()
++# # circle.draw()
++#
++# # 简单工厂实现的思路：不指定某一个特定的类创建对象，而直接找工厂创建
++# # 从工厂加工出来的商品可以做定制模式
++# class ShapeFactory:
++#     def create(self,shape_name):
++#         r=None
++#         if shape_name=="circle":
++#             r = Circle()
++#             r.brand="圆形工厂加工出来的"
++#         elif shape_name=="rectangle":
++#             r=Rectangle()
++#         elif shape_name=="square":
++#             r=Square()
++#         return r
++#
++# # fac=ShapeFactory()
++# # obj=fac.create("circle")
++# # # obj=fac.create("square")
++# # obj.draw()
++# # print(obj.brand)
++# c=Circle()
++#
++# print(c.brand)
++
++# ② 工厂方法模式
++# 给每一个形状都加一个工厂，大的工厂ShapeFactory下还有子工厂（圆形工厂、长方形工厂、正方形工厂）
++class Shape:
++    def __init__(self):
++        self.brand=None
++class A:
++    pass
++class Circle(Shape):
++    def __init__(self,a):
++        super().__init__()
++        self.a=a
++
++    def draw(self):
++        print("画圆形")
++class Rectangle(Shape):
++    def draw(self):
++        print("画矩形")
++class Square(Shape):
++    def draw(self):
++        print("画正方形")
++
++
++class ShapeFactory:
++    def create(self):
++       pass
++class CircleFactory(ShapeFactory):
++    def create(self):
++        a=A()
++        c=Circle(a)
++        return c
++class RectangleFacory(ShapeFactory):
++    def create(self):
++        c = Rectangle()
++        return c
++class SquareFacory(ShapeFactory):
++    def create(self):
++        c = Square()
++        return c
++
++cf=CircleFactory()
++c=cf.create()
++c.draw()
++
++# 使用的场景：
++# （1）一个类不知道创建他的对象时需要哪些其他类或者一起来创建。
++# （2）一个类希望由它的子类 来指定它创建的对象。
++
++
++# 2. 单例模式
++# 背景：当一个类只希望有一个实例存在。比如，数据库的连接。每个库都有自己的用户名和密码
++# user表
++# username   password...
++# yinda        123
++# zhangsan     111
++# select * from user where username=? and password=?
++# 单例模式的特点：单例类只能有一个实例
++# 单例模式的实现方式：
++# python有四种模式实现单例：
++
++# 方式一、自带的模块就单例模式
++from day23.mysinglton import aobj   # 无论有多少个线程同时访问，都只能执行一次。
++# aobj就只有一个
++
++
++# 方式二、使用new方法 ，创建对象，调用类下的__new__
++class Singleton:
++    _instance=None
++    def __new__(cls, *args, **kwargs):
++        if not cls._instance:
++            cls._instance=super().__new__(cls, *args, **kwargs)
++        return cls._instance
++
++s1=Singleton()
++s2=Singleton()
++print(s1 is s2)
++
++
++# 方式二、使用元类
++# 创建类：元类下的new 和init
++# 创建对象：元类下的call，类下的new和init
++class Singleton(type):
++    _instance=None
++    def __call__(self, *args, **kwargs):
++        if not self.__class__._instance :
++            self.__class__._instance=super().__call__(*args, **kwargs)
++        return self.__class__._instance
++class M(metaclass=Singleton):
++    pass
++m1=M()
++m2=M()
++print(m1 is m2)
++
++
++# 方式四、装饰器
++from functools import wraps
++def Singleton(cls):
++    _instance=None
++    @wraps(cls)
++    def inner(*args,**kwargs):
++        nonlocal _instance
++        if not _instance :
++            _instance=cls(*args,**kwargs)
++        return _instance
++    return inner
++
++@Singleton
++class A:
++    pass
++a1=A()
++a2=A()
++print(a1 is a2)
++
++
++# 2. 结构模式
++# 解决创建对象之后，对象和对象之间的依赖关系。
++# （1）适配器模式
++# 解决问题：当已有功能可以使用，但是接口与调用者不匹配，需要使用适配器模式。
++# 例子：5个人（类） 打篮球，其中一个人需要调用外籍球员（攻击、防卫方法跟前面4个人不一样）
++class Player:
++    def __init__(self,name):
++        self.name=name
++    def attack(self):
++        print("{}进攻".format(self.name))
++    def defense(self):
++        print("{}防御".format(self.name))
++class Forwads(Player):
++    pass
++class Center(Player):
++    pass
++class Guards(Player):
++    pass
++
++class Foreign:
++    def __init__(self,name):
++        self.name=name
++    def foreignAttack(self):
++        print("{}外籍球员进攻".format(self.name))
++    def foreignDefense(self):
++        print("{}外籍球员防御".format(self.name))
++
++class Translator(Player):
++    def __init__(self,name):
++        super().__init__(name)
++        self.foreignCenter = Foreign(self.name)
++
++    def attack(self):
++        self.foreignCenter.foreignAttack()
++    def defense(self):
++        self.foreignCenter.foreignDefense()
++
++
++f1=Forwads("张三丰")
++f2=Forwads("张四丰")
++c=Center("李四")
++# c=Translator("tom")
++g1=Guards("王五")
++g2=Guards("王六")
++c.attack()
++c.defense()
++
++# 适合的场景：
++# 如果希望使用一方，现存）的类，但是接口不符合需求的时候个已存在（第三
+\ No newline at end of file
+Index: python1808real/day23/mysinglton.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- python1808real/day23/mysinglton.py	(date 1538959468105)
++++ python1808real/day23/mysinglton.py	(date 1538959468105)
+@@ -0,0 +1,4 @@
++class A:
++    def test(self):
++        print("这是A类中的test方法")
++aobj=A()
+\ No newline at end of file

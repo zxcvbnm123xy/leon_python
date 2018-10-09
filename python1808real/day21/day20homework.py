@@ -35,10 +35,6 @@ from multiprocessing.pool import ApplyResult
 #     print("执行的结果是={}".format(result))
 #     print("执行的时间={}".format(end-start))
 
-
-
-
-
 # 2. 尝试使用concurrent.futures模块的进程池完成累加的案例（计算密集型和IO密集型）
 from concurrent.futures import ProcessPoolExecutor,as_completed
 #ProcessPoolExecutor 上下文管理器，使用with语句体
@@ -56,4 +52,3 @@ if  __name__=="__main__":
     sum_processExecutor(10000000,20000000)
     end=time.time()
     print("执行的时间={}".format(end-start))
-
