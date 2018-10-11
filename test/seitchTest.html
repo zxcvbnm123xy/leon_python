@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch</title>
+    <script type="text/javascript">
+        function test01(){
+            var n=parseInt(prompt("输入月份：",1))
+            switch (n){
+                case 1:
+                    alert("一月份")
+                    break
+                case 2:
+                    alert("二月份")
+                    break
+                case 3:
+                    alert("三月份")
+                    break
+                case 4:
+                    alert("四月份")
+                    break
+                case 5:
+                    alert("五月份")
+                    break
+                case 6:
+                    alert("六月份")
+                    break
+                case 7:
+                    alert("七月份")
+                case 8:
+                    alert("八月份")
+                    break
+                case 9:
+                    alert("九月份")
+                    break
+                case 10:
+                    alert("十月份")
+                case 11:
+                    alert("十一月份")
+                    break
+                case 12:
+                    alert("十二月份")
+                    break
+                default :
+                    alert("请重新输入")
+            }
+            if (12<=n<=2){
+                alert("冬季")
+            }else if (3<=n<=5){
+                alert("春季")
+            }else if (6<=n<=8){
+                alert("夏季")
+            }else if (9<=n<=11){
+                alert("秋季")
+            }
+        }
+        function test02() {
+
+        }
+     </script>
+</head>
+<body>
+     <button onclick="test01()">test01</button>
+     <button onclick="test02()">test02</button>
+</body>
+</html>

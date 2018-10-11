@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript第一个程序</title>
+    <script type="text/javascript">
+        /*js的代码写于script标签中 js也有3种写入方式
+            行内js----在元素中直接写js的代码
+            内部js------在html页面中 嵌入script标签，代码写入标签中。script标签
+            可以在页面的任何位置。但是要注意js是顺序执行的。
+            外部js------引入外部的js文件 script
+        */
+        //JavaScript的单行注释  JavaScript简称为js
+        /*
+        * 多行注释
+        * */
+        function test01(){
+            //alert是系统自带的函数 用于弹出警告框，用于输出
+            alert("hello world")
+        }
+        //test01();//函数被调用
+    </script>
+</head>
+<body>
+    <input type="button" value="test01" onclick="test01();"/>
+    <input type="button" value="test02" onclick="javascript:alert('行内')"/>
+</body>
+</html>

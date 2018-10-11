@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类型转换</title>
+    <script type="text/javascript">
+        function test01() {
+            num = 0
+            r1 = num&&true//0
+            r2 = num+true//1
+            r3 = true&&num//0
+            r4 = num+'23'//做拼接023
+            //parseInt()将字符串转换为整数
+            //parseFloat()将字符串转换为浮点数
+            r5 = num+parseInt('23px')//23
+            r5 = num+parseInt('px23')//NaN
+            //任何数与NaN运算的结果都是NaN
+            r6 = 1+null//1
+            r6 = 1+undefined //NaN
+            r6 = true&&undefined //undefined
+            r6 = true&&null //null
+            r6 = !null  //true
+            r6 = false&&7 //false
+            r6 = false == 0 //true
+            //  null<--->number<---->boolean
+            r6 = false == null //false
+            //null<--->string<---->number
+            r6 = null+'ab' //nullab
+            t1 = true
+            t2 = 1
+            // == 等值符：值相等即等   ===等同符 值相等并且同类型
+            r6 = t1 === t2
+            alert(r6)
+        }
+    </script>
+
+</head>
+<body>
+    <button onclick="test01()">test01</button>
+</body>
+</html>

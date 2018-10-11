@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>message</title>
+    <script type="text/javascript">
+        function test01() {
+            //点击确定返回的true 点击取消 返回的false
+            if(confirm("是否删除？")){
+                alert("执行删除动作")
+            }
+        }
+        function test02() {
+            //第二个参数默认值  如果不设置那么为null 建议写默认值
+            t = prompt("请输入一个数字",1)
+            alert(t)
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="test01()">test01</button>
+    <button onclick="test02()">test02</button>
+</body>
+</html>

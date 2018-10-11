@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>while语句</title>
+    <script type="text/javascript">
+        function test01() {
+            sum = 0;
+            i = 1
+            while(i<=10)
+                sum+=i++
+            alert(sum)
+        }
+        //死循环
+        function test02() {
+            //document.write写入文档中
+            // while (true)
+            //     //console是打印到控制台
+            //     console.info("hello world")
+            for(;;)
+                console.info("hello world")
+             for(;true;)
+                console.info("hello world")
+        }
+        function test03() {
+            sum = 0
+            i=1
+            do{
+                sum+=i++
+            }while(i<=10)
+            alert(sum)
+        }
+        function test04() {
+            var arr = [1,2,3,4,5]//js的数组
+            for(i in arr){
+                document.write(arr[i]+"<br/>")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="test01()">test01</button>
+    <button onclick="test02()">test02</button>
+    <button onclick="test03()">test03</button>
+    <button onclick="test04()">test04</button>
+</body>
+</html>

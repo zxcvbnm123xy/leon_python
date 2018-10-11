@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>try</title>
+    <script type="text/javascript">
+        function test01() {
+            try{
+                i/0
+            }
+            catch (err){
+                  document.write(err.toString()+"<br>")
+            }
+            document.write("tt")
+        }
+    </script>
+</head>
+<body>
+    <button onclick="test01()">test01</button>
+</body>
+</html>

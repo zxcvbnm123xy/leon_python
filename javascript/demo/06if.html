@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if语句</title>
+    <script type="text/javascript">
+        function test01() {
+            //Date 是js中内置的日期对象  new一个日期就是当前时间
+            var d  = new Date()
+            /*
+            * if语句后的大括号 表示if条件成立时要执行的代码块
+            * if语句后的小括号中是条件
+            * 当if语句的代码块只有一条语句时 可以省略大括号
+            * */
+            if(d.getHours()>12){
+                alert("good afternoon")
+            }
+        }
+        function test02() {
+            var d  = new Date()
+            /*
+            * if语句和else语句必须配套
+            * */
+            if(d.getHours()<10){
+                 alert("good morning")
+            }
+            else{
+                 alert("good afternoon")
+            }
+        }
+        function test03() {
+            var score = 90
+            if (score>=90){
+                alert("A")
+            }else if(score>=80){
+                alert("B")
+            }else if(score>=60){
+                alert("C")
+            }else {
+                alert("D")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="test01()">test01</button>
+    <button onclick="test02()">test02</button>
+    <button onclick="test03()">test03</button>
+</body>
+</html>

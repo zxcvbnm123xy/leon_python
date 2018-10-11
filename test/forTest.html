@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For</title>
+    <script type="text/javascript">
+        function test01() {
+            sum=0
+            for(i=1;i<=100;i+=2){
+                sum+=i
+            }
+            alert(sum)
+        }
+        function test02() {
+            str=""
+            for(i=1;i<=9;i++){
+                for (j=1;j<=i;j++){
+                  str+=i+"x"+j+"="+(i*j) +"\t"
+                }
+                str+="\n"
+            }
+            alert(str)
+        }
+    </script>
+</head>
+<body>
+<button onclick="test01()">test01</button>
+<button onclick="test02()">test02</button>
+</body>
+</html>
