@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history对象</title>
+    <script type="text/javascript">
+        function  test01() {
+            //history记录访问过的所有的url
+            document.write("历史网页个数："+history.length)
+            //history.go(n)n为整数时 是前进n个页面  n为负数时 是后退n个页面
+        }
+    </script>
+</head>
+<body>
+    <a href="../ecma/14function.html">函数</a><br>
+    <button onclick="javascript:history.back()">后退</button><button onclick="javascript:history.forward()">前进</button><br>
+    <button onclick="test01()">test01</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+    <style type="text/css">
+        img{
+            position: absolute;
+            top:0px;
+            left:0px;
+        }
+    </style>
+    <script type="text/javascript">
+        //键盘被按下的事件
+        l = 0
+        t = 0
+        window.onkeydown = function (ev) {
+            //获取图片
+            var o = document.getElementById("img")
+            e = ev||event
+            switch(e.keyCode){
+                case 37://向左
+                    o.style.left=(l-10)+"px"
+                    l-=10
+                    break;
+                case 38://向上
+                    o.style.top=(t-10)+"px"
+                    t-=10
+                    break;
+                case 39://向右
+                    o.style.left=(l+10)+"px"
+                    l+=10
+                    break;
+                case 40://向下
+                    o.style.top=(t+10)+"px"
+                    t+=10
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+<img id="img" src="../image/xx.png"/>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script type="text/javascript">
+        /**
+        function name(parameters...){
+            .....
+        }
+         */
+
+        //函数的声明
+        function test01(){
+            alert("hello")
+        }
+        //函数的调用
+        // test01();
+        // test01();
+        //声明带参数的函数
+        function add( a,  b) {
+            c = a+b
+            alert(c)
+        }
+       // add(3,5)
+        //使用return 进行返回函数的执行结果
+        //在同一个文件中函数名不能相同，如果出现了同名函数 那么前面的函数将会被后面的
+        //函数覆盖
+        // function add(a,b) {
+        //     return a+b
+        // }
+        //alert(add(3,4))
+        //函数的声明参数可以和调用参数不一致
+        //alert(add(3))
+        //匿名函数
+        //函数是一个对象 可以赋值给一个变量  然后将变量可以当函数使用
+        var add = function (a,b) {
+            return a+b
+        }
+        //alert(add(5,6))
+        //函数时可以作为参数传递的
+        function  add1(a,b) {
+            c = a+b(3,4)
+            alert(c)
+        }
+        //add1(6,add)
+        //函数的匿名自调用
+        (function () {
+            alert("hello function")
+        })()
+    </script>
+
+</head>
+<body>
+    <a href="18oop.html">oop</a>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取和设置元素的文本内容和内部html</title>
+</head>
+<body>
+    <p id="tip"><span>hello javascript</span></p>
+    <button onclick="getContent()">获取内容</button><button onclick="getHtmlContent()">获取内部html</button>
+    <button onclick="setContent()">设置内容</button><button onclick="setHtmlContent()">设置内部html</button>
+   <script type="text/javascript">
+        p = document.getElementById("tip")
+        function getContent() {
+            //通过innerText属性获取
+            alert(p.innerText)
+        }
+        function getHtmlContent() {
+            //通过innerHTML属性获取
+            alert(p.innerHTML)
+        }
+        function setContent() {
+            //通过为innerText赋值 改变内容
+            p.innerText = "hello js"
+        }
+        function setHtmlContent() {
+            //通过innerHTML属性获取
+            p.innerHTML = "<font color='red'>hello js,hello you</font>"
+        }
+
+    </script>
+</body>
+</html>

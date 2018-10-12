@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义对象</title>
+    <script type="text/javascript">
+        function  test01() {
+            //定义对象
+            var obj = new Object()
+            obj.name = 'zhangsan'
+            obj.age = 23
+            obj.sex = "male"
+            //alert(obj.name+"--"+obj.age+"---"+obj.sex)
+            obj.show = function(){
+                alert(obj.name+"--"+obj.age+"---"+obj.sex)
+            }
+            obj.show()
+        }
+        // test01()
+        //定义类
+        //通过function 关键字定义类 类名大写开头
+        //参数是 构造方法的参数
+        function User(name,age) {
+            this.name = name
+            this.age = age
+            this.show = function () {
+                alert(name+"-----"+age)
+            }
+        }
+        function  test02() {
+            //创建对象
+            var user = new User('王二麻子',44)
+            user.show()
+        }
+        //test02()
+        function test03() {
+            var obj = {}//创建一个对象
+            obj.name = 'zhangsan'
+            obj.age = 23
+            obj.sex = "male"
+            //alert(obj.name+"--"+obj.age+"---"+obj.sex)
+            obj.show = function(){
+                alert(obj.name+"--"+obj.age+"---"+obj.sex)
+            }
+            obj.show()
+        }
+        //test03()
+        function test04() {
+            //JSON
+            var user = {'name':'王二麻子','age':34,'sex':'male','marriedStatus':'single'}
+            alert(user.name+"---"+user.age+"---"+user.sex+"---"+user.marriedStatus)
+        }
+        test04()
+        /**
+         * 学校里面有很多老师，也有很多学生，老师有姓名和年龄还有工资，学生有姓名，年龄和性别 用json表示
+         */
+        var school = {"teachers":[{"name":"lucy","age":22,"salary":10000},{"name":"hanmeimei","age":30,"salary":5000}],
+                        "students":[{"name":"xiaozhang","age":12,"sex":'female'}]}
+    </script>
+</head>
+<body>
+    <a href="../bom/20history.html">histroy</a>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组对象</title>
+    <script type="text/javascript">
+        function test01() {
+            /*
+            数组用于存放一组数据，相当于python中的list
+             */
+            var arr=new Array() //创建一个空数组
+            var t=new Array(3)//创建指定大小的数组
+            var arr=new Array(1,2,3,4,5) //穿件数组时置顶元素
+            var arr=[] //创建空数组
+            var arr=[1,2,3,4,5] //创建数据并指定元素
+
+            //向数组中添加元素
+            t[0]=12
+            t[1]=13
+            t[2]=14
+            t[30]=15
+            alert(t)
+            //删除最后一个元素
+            t.pop()
+            alert(t,t.length) //length表长度
+
+        }
+        test01()
+    </script>
+</head>
+<body>
+
+</body>
+</html>

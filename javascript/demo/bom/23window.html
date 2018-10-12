@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+    <script type="text/javascript">
+        function test01() {
+            //获取window对象的属性信息 window对象默认可以不写  直接使用其属性或者方法即可
+            document.write(window.defaultStatus+"<br>")
+            document.write(innerWidth+"---"+window.innerHeight+"<br>")
+            document.write(window.screenX+"---"+window.screenY+"<br>")
+        }
+        //test01()
+        function printHello() {
+            document.write("hello<br>")
+        }
+        function test02() {
+           // setInterval("printHello()",2000)
+            //t = setInterval(printHello,2000)
+
+        }
+        //test02()
+        function scrollWindow()
+          {
+          window.scrollTo(100,500)
+          }
+
+    </script>
+</head>
+<body>
+    <button onclick="javascript:clearInterval(t)">停止打印</button>
+  <button onclick="javascript:window.close()">关闭窗口</button>
+  <button onclick="javascript:window.open('http://www.baidu.com','xx')">打开新窗口</button>
+<button onclick="javascript:window.print()">打印</button><br>
+<input type="button" onclick="scrollWindow()" value="Scroll" /><br>
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+
+
+</body>
+</html>

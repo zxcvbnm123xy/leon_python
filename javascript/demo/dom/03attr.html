@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取属性和设置属性</title>
+    <script type="text/javascript">
+        function getInfo() {
+            img = document.getElementById("mv")
+            //属性值有2种获取方式
+            //直接通过.属性名获取
+            //通过对象getAttribute方法获取
+            //alert(img.src)
+            //alert(img.getAttribute("src"))
+        }
+        function changemv() {
+            img = document.getElementById("mv")
+            path = img.src
+            path = path.substring(0,path.lastIndexOf("/")+1)
+            img.src = path+"m2.jpg"
+        }
+    </script>
+</head>
+<body>
+    <img id="mv" src="../image/m1.jpg" width="400" height="200"><br>
+    <button onclick="getInfo()">获取图片信息</button>
+    <button onclick="changemv()">换一个美女</button>
+</body>
+</html>

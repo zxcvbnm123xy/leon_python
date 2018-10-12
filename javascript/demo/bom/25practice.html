@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时实现</title>
+    <script type="text/javascript">
+        var h = 0.01
+         var s = h*60*60
+        function click() {
+            //显示的小时数
+            var sh = Math.floor(s/3600)
+            //显示的分钟数
+            var sm = Math.floor(s%3600/60)
+            //显示的秒数
+            var ss = s%60
+            s--
+            var p = document.getElementById("nowTime")
+            p.innerText=to2(sh)+":"+to2(sm)+":"+to2(ss)
+            if(s ==0){
+                alert("结束")
+                clearInterval(st)
+            }
+        }
+         function to2(m){
+            if (m<10){
+                return '0'+m
+            }
+            return m
+        }
+        var st = setInterval(click,1000)
+    </script>
+</head>
+<body>
+<h1 id="nowTime"></h1>
+<script type="text/javascript">
+    printTime()
+</script>
+</body>
+</html>

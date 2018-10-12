@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>location对象</title>
+    <script type="text/javascript">
+        function test01() {
+            //获取location相关属性信息
+            document.write(location.host+"<br>")
+            document.write(location.hostname+"<br>")
+            document.write(location.href+"<br>")
+            document.write(location.port+"<br>")
+            document.write(location.protocol+"<br>")
+            document.write(location.search+"<br>")
+        }
+        //test01()
+        //设置location的属性 通常就是href属性
+        function test02() {
+            location.href="http://www.baidu.com"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="test02()">跳转到百度</button>
+</body>
+</html>

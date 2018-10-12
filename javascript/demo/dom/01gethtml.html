@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过js获取html元素对象</title>
+    <script type="text/javascript">
+        function test01() {
+            /**
+             * js获取html元素对象有3种方式
+             * 第一种同id来获取元素对象
+             * document.getElementById("id")
+             * 第二种方式 通过标签名称来获取一组对象
+             * document.getElementsByTagName()
+             * 第三种方式通过name获取 这种一般是用于获取表单元素
+             * document.getElementsByName("username")[0]
+             */
+            h1 = document.getElementById("t")
+            //普通的标签元素 都有文本内容 可以通过innerText属性获取
+            //alert(h1.innerText)
+            ps = document.getElementsByTagName("p")
+
+           // alert(ps.length)
+
+        }
+        function getContent() {
+            input = document.getElementsByName("username")[0]
+            //表单元素的内容 都是value属性
+            alert(input.value)
+        }
+    </script>
+</head>
+<body>
+    <h1 id="t">hello</h1>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <input name="username" type="text"/><button onclick="getContent()">获取内容</button>
+    <script type="text/javascript">
+         test01()
+    </script>
+</body>
+</html>

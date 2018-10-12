@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date对象</title>
+    <script type="text/javascript">
+        //获取当前日期，并以yyyy-mm-dd的形式输出
+       function formatDate() {
+           var date = new Date(2018, 9, 12)
+           var year = data.getFullYear()
+           var month = to2(date.getMonth() + 1)
+           var day = to2(date.getDate())
+           return year+"-"+month+"-"+day+" "+to2(date.getHours())+":"+to2(date.getMinutes())+":"+to2(date.getSeconds())
+       }
+       function to2(m) {
+            if (m<10){
+                return '0'+m
+            }
+               return m
+           }
+       alert(formatDate())
+    </script>
+</head>
+<body>
+
+</body>
+</html>

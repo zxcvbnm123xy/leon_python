@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice</title>
+    <script type="text/javascript">
+        function formatDate() {
+            var date = new Date()
+            var year = date.getFullYear()
+            var month = to2(date.getMonth()+1)
+            var day = to2(date.getDate())
+            return year+"-"+month+"-"+day+" "+to2(date.getHours())+":"+to2(date.getMinutes())+":"+to2(date.getSeconds())
+        }
+        function to2(m){
+            if (m<10){
+                return '0'+m
+            }
+            return m
+        }
+    function printTime() {
+        var p = document.getElementById("nowTime")
+        p.innerText=formatDate()
+    }
+    setInterval(printTime,1000)
+    </script>
+</head>
+<body>
+<h1 id="nowTime"></h1>
+<script type="text/javascript">
+    printTime()
+</script>
+</body>
+</html>
