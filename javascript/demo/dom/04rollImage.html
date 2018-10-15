@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #adv{
+            height: 470px;
+            width: 590px;
+            /*background-image: url("../image/t0.jpg");*/
+        }
+    </style>
+    <script type="text/javascript">
+        index = 0
+        function roleImage() {
+            index++
+            if(index%8==0){
+                index = 0
+            }
+            adv = document.getElementById("adv")
+            adv.src="../image/t"+index+".jpg"
+        }
+        setInterval(roleImage,2000)
+    </script>
+</head>
+<body>
+    <img id="adv" src="../image/t0.jpg"/>
+</body>
+</html>

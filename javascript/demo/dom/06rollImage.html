@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #adv {
+            height: 470px;
+            width: 590px;
+            background-image: url("../image/t0.jpg");
+        }
+        #adv ul{
+            list-style: none;
+            width: 300px;
+            height: 20px;
+            margin-top: 430px;
+            border: 1px solid black;
+        }
+        #adv ul li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+            float: left;
+            margin: 5px 8px;
+        }
+    </style>
+    <script type="text/javascript">
+        index = 0
+        function roleImage() {
+            index++
+            if(index%8==0){
+                index = 0
+            }
+            adv = document.getElementById("adv")
+            adv.style.backgroundImage="url('../image/t"+index+".jpg')"
+        }
+        function changeIndex(i) {
+            index=i
+            adv=document.getElementById("adv")
+            adv.style.backgroundImage="url('../image/t"+index+".jpg')"
+            lis=document.getElementById("li")
+            for(var i=0;i<lis.length;i++){
+                lis[i].style.background="hala(0,0%,100%,.2"
+            }
+        }
+        setInterval(roleImage,2000)
+    </script>
+    <script>
+
+
+    </script>
+</head>
+<body>
+<div id="adv"></div>
+<ul>
+    <li onmouseover="changeIndex(0)"></li>
+    <li onmouseover="changeIndex(1)"></li>
+    <li onmouseover="changeIndex(2)"></li>
+    <li onmouseover="changeIndex(3)"></li>
+    <li onmouseover="changeIndex(4)"></li>
+    <li onmouseover="changeIndex(5)"></li>
+    <li onmouseover="changeIndex(6)"></li>
+    <li onmouseover="changeIndex(7)"></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            position: absolute;
+            top:10px;
+            left: 200px;
+            width: 360px;
+            height: 500px;
+            border: 5px solid #ccc;
+        }
+        p{
+            width: 180px;
+            height: 10px;
+            background-color: white;
+            border: 2px solid #ccc;
+            margin:0px;
+            position: absolute;
+            top: 420px;
+            left:90px;
+        }
+        img{
+            position: absolute;
+            top: 20px;
+            left:50px;
+            visibility:hidden;
+        }
+        button{
+            position: absolute;
+            display: block;
+            top: 550px;
+            left: 250px;
+        }
+    </style>
+    <script type="text/javascript">
+        hflag=true//水平方向标志 如果是true表示从左往右移动
+        vflag=true//垂直方向 如果是true表示从上到下移动
+        function init() {
+            var left = parseInt(Math.random()*360)
+            var ttop = parseInt(Math.random()*150)
+            var ball = document.getElementById("ball")
+            ball.style.visibility = "visible"
+            ball.style.left = left+"px"
+            ball.style.top = ttop+"px"
+        }
+        function move() {
+            var ball = document.getElementById("ball")
+            computedStyle = document.defaultView.getComputedStyle(ball,null)
+            btop = parseInt(computedStyle.top)
+
+            left = parseInt(computedStyle.left)
+            if(hflag){
+                left+=2
+                ball.style.left=left+"px"
+                if(left>=340){
+                    hflag=false
+                }
+            }else{
+                left-=2
+                ball.style.left=left+"px"
+                if(left<=0){
+                    hflag=true
+                }
+            }
+            if(vflag){
+                btop+=2
+                ball.style.top=btop+"px"
+                if(btop>=400){
+                    //判断被借助否
+                    board = document.getElementById("board")
+                    boardLeft = parseInt(document.defaultView.getComputedStyle(board,null).left)
+                    if(left>=(boardLeft-10)&&left<=(boardLeft+170)){
+                        vflag=false
+                    }else{
+                        alert("game over")
+                        clearInterval(iter)
+                    }
+
+                }
+            }else{
+                btop-=2
+                ball.style.top=btop+"px"
+                if(btop<=0){
+                    vflag=true
+                }
+            }
+
+        }
+        window.onkeydown=function (ev) {
+            board = document.getElementById("board")
+            boardLeft = parseInt(document.defaultView.getComputedStyle(board,null).left)
+            e = ev||event
+            switch (e.keyCode){
+                 case 37://向左
+
+                     boardLeft-=30
+                     if(boardLeft<=0){
+                         boardLeft=0
+                     }
+                     board.style.left=boardLeft+"px"
+                     break;
+                case 39://向右
+                     boardLeft+=30
+                     if(boardLeft>=176){
+                         boardLeft=176
+                     }
+                     board.style.left=boardLeft+"px"
+                     break;
+            }
+        }
+        function  start() {
+            init()
+            iter = setInterval(move,20)
+        }
+    </script>
+</head>
+<body>
+<div>
+    <img id="ball" src="../image/ball.png">
+    <p id="board"></p>
+</div>
+<br/>
+<button onclick="start()">start</button>
+</body>
+</html>

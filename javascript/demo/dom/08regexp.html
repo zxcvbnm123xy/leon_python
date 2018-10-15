@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <script type="text/javascript">
+        function checkName() {
+            /**
+             js中定义正则表达式
+             var r = new RegExp()
+             var r = //
+             * */
+            var name = document.getElementById("name")
+            var r =/^[a-zA-Z]\w*$/
+            if(name.value.length<4||!r.test(name.value)){
+                name.style.border = "1px solid red"
+            }else{
+                 name.style.border = "1px solid green"
+            }
+        }
+        function checkPhone() {
+            var phone = document.getElementById("phone")
+            var reg = /^\(\d{3,4}\)[1-9]\d{6,7}|(\d{3,4}-[1-9]\d{6,7})$/
+            if(!reg.test(phone.value)){
+                 phone.style.border = "1px solid red"
+            }else{
+                 phone.style.border = "1px solid green"
+            }
+        }
+        function checkEmail() {
+            var email = document.getElementById("email")
+            var reg = /^\w*@\w*\.(com|cn|edu|com.cn)$/
+            if(!reg.test(email.value)){
+                 email.style.border = "1px solid red"
+            }else{
+                 email.style.border = "1px solid green"
+            }
+        }
+        function checkPostCode() {
+            var postcode = document.getElementById("postcode")
+            var reg = /^\d{6}$/
+            if(!reg.test(postcode.value)){
+                 postcode.style.border = "1px solid red"
+            }else{
+                 postcode.style.border = "1px solid green"
+            }
+        }
+        function checkIp() {
+            var ip = document.getElementById("ip")
+            var reg = /^(\d|\d{2}|1\d{2}|2[0-4]\d|25[0-5])\.(\d|\d{2}|1\d{2}|2[0-4]\d|25[0-5])\.(\d|\d{2}|1\d{2}|2[0-4]\d|25[0-5])\.(\d|\d{2}|1\d{2}|2[0-4]\d|25[0-5])$/
+            if(!reg.test(ip.value)){
+                 ip.style.border = "1px solid red"
+            }else{
+                 ip.style.border = "1px solid green"
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="post">
+        姓名：<input type="text" id="name" name="name" onblur="checkName()"/><span>姓名不能少于4位字符,只能以字母开头</span><br>
+        座机电话：<input type="text" id="phone" name="phone" onblur="checkPhone()"/><br>
+        邮箱：<input type="text" id="email" name="email" onblur="checkEmail()"/><br>
+        邮政编码：<input type="text" id="postcode" name="postcode" onblur="checkPostCode()"/><br>
+        IPv4：<input type="text" id="ip" name="ip" onblur="checkIp()"/><br>
+    </form>
+</body>
+</html>

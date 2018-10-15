@@ -240,7 +240,7 @@ c.draw()
 # python有四种模式实现单例：
 
 # 方式一、自带的模块就单例模式
-from day23.mysinglton import aobj   # 无论有多少个线程同时访问，都只能执行一次。
+# from python1808real/day23/my   # 无论有多少个线程同时访问，都只能执行一次。
 # aobj就只有一个
 
 

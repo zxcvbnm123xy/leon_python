@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js控制css</title>
+    <script type="text/javascript">
+    function changeCss(){
+        div = document.getElementById("dd")
+        //通过style属性来修改html元素的样式
+        //div.style.width="300px"
+        div.style.height="200px"
+        div.style.border="1px solid green"
+    }
+    function changeBg() {
+        div = document.getElementById("dd")
+        div.style.backgroundImage="url(../image/t1.jpg)"
+    }
+    function getCss() {
+        div = document.getElementById("dd")
+        //通过style来直接获取样式 只能获取行内样式
+        alert(div.style.width)
+        //IE中使用的是obj.currentStyle方法，而FF是用的是getComputedStyle 方法
+        try{
+            computedStyle = document.defaultView.getComputedStyle(div,null)
+        }catch (err){
+            computedStyle = div.currentStyle
+        }
+        alert(computedStyle.height)
+    }
+</script>
+</head>
+<body>
+<div id="dd" style="width: 300px"></div>
+<button onclick="changeCss()">改变样式</button>
+<button onclick="getCss()">获得样式信息</button>
+<button onclick="changeBg()">改变背景</button>
+</body>
+</html>
