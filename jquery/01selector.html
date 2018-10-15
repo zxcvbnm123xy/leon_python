@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+    </style>
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        function test01() {
+            obj = document.getElementById("myDiv")  //获取的是js的元素对象
+            try{
+                computedStyle = document.defaultView.getComputedStyle(obj,null)
+            }catch (err){
+                computedStyle = obj.currentStyle
+            }
+           // alert(computedStyle.width)
+            $("#myDiv")//通过jquery的方法的获取的对象是jquery对象
+            //js的元素对象和jquery对象不一样  jquery对象可以使用jquery定义好的方法  js对象不能
+            //alert($("#myDiv").css("width"))
+            //将js对象转换为jquery对象 $(obj)
+            //alert($(obj).css("width"))
+            //将jquery对象转换为js对象加[0]
+            //alert( $("#myDiv")[0].innerText)
+        }
+    </script>
+</head>
+<body>
+    <div id="notMe"><p>id="notMe"</p></div>
+    <div id="myDiv">id="myDiv"</div>
+    <button onclick="test01()">test01</button>
+</body>
+</html>

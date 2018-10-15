@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #adv{
+            height: 470px;
+            width: 590px;
+            margin-top: 0px;
+            background-image: url("../image/t0.jpg");
+        }
+        #nav{
+            list-style: none;
+            width: 300px;
+            height: 20px;
+            margin-top:190px ;
+        }
+        #nav li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid red;
+            float: left;
+            margin: 5px 7px;
+        }
+        #btn{
+            width: 590px;
+            height: 40px;
+            padding: 0px;
+            margin: 180px 0px 0px 0px;
+            list-style: none;
+        }
+        #btn li{
+            width: 20px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #ccc;
+            background-color: hsla(0,0%,100%,.2);
+        }
+        .lf{
+            float: left;
+        }
+        .rt{
+            float: right;
+        }
+        .active{
+            background: red
+        }
+    </style>
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        index = 0
+        function roleImage() {
+            index++
+            if(index%8==0){
+                index = 0
+            }
+            $("#adv").css("background-image","url('../image/t"+index+".jpg')")
+            changebg(index)
+        }
+        function changebg(index) {
+            $("#nav li").css("background","hsla(0,0%,100%,.2)")
+            $("#nav li").eq(index).css("background","red")
+        }
+        function changeIndex(i){
+            clearInterval(inter)
+            index = i
+            adv = document.getElementById("adv")
+            adv.style.backgroundImage="url('../image/t"+index+".jpg')"
+            changebg(index)
+        }
+        function changeImage(flag) {
+            clearInterval(inter)
+            if(flag=='l')
+                index--
+            else
+                index++
+            if(index==-1){index=7}
+            if(index==8){index=0}
+            $("#adv").css("background-image","url('../image/t"+index+".jpg')")
+            changebg(index)
+        }
+        $(function(){
+            $("#nav li").mouseover(function(){
+                clearInterval(inter)
+                var i = $("#nav li").index(this);
+                index = i
+                $("#adv").css("background-image","url('../image/t"+index+".jpg')")
+                changebg(index)
+            })
+            $("#nav li").mouseout(function () {
+                 inter = setInterval(roleImage,2000)
+            })
+             $("#btn li").mouseover(function () {
+                clearInterval(inter)
+                 $(this).css("background","hsla(0,0%,100%,.8)")
+            })
+             $("#btn li").mouseout(function () {
+                inter = setInterval(roleImage,2000)
+                 $(this).css("background","hsla(0,0%,100%,.2)")
+            })
+        })
+        var inter = setInterval(roleImage,2000)
+    </script>
+</head>
+<body>
+<div id="adv">&nbsp;
+    <ul id="btn">
+        <li class="lf" onclick="changeImage('l')">&lt;</li>
+        <li class="rt" onclick="changeImage('r')">&gt;</li>
+    </ul>
+    <ul id="nav">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>
