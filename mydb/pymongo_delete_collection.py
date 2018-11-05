@@ -5,7 +5,7 @@ import pymongo
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
 # 定位到数据库mongo_python和集合sites
-##use mongo_python
+##use mongo_pythonh
 mp = myclient["mongo_python"]
 
 cols = mp.list_collection_names()
