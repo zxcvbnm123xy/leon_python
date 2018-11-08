@@ -4,6 +4,7 @@ __author__ = 'Leon'
 
 
 import requests
+import re
 
 # 使用headers
 headers = {
@@ -19,7 +20,9 @@ params = {
     'key2': 'test2'
 }
 # url 不需要添加后续的 ? 和 url参数
-url = 'http://httpbin.org/get'
+url = 'http://book.zongheng.com/showchapter/672340.html'
 response = requests.get(url, params=params, headers=headers)
+
+response.encoding=("utf-8")
 
 print(response.text)

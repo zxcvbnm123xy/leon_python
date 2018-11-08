@@ -3,6 +3,7 @@
 __author__ = 'Leon'
 
 import requests
+import re
 
 # 使用headers
 headers = {
@@ -18,7 +19,17 @@ params = {
     'key2': 'test2'
 }
 # url 不需要添加后续的 ? 和 url参数
-url = 'http://httpbin.org/get'
+url = 'https://www.booktxt.net/5_5871/4631670.html'
 response = requests.get(url, params=params, headers=headers)
 
-print(response.text)
+response.encoding = ("gbk")
+
+content = response.text
+
+title = '<title>(.*?)_.*?</title>'
+t = re.search(title, content, re.RegexFlag.M)
+print(t.group(1))
+
+description = '<meta name="description" content="(.*?)" />'
+d = re.search(description, content, re.RegexFlag.M)
+print(d.group(1))

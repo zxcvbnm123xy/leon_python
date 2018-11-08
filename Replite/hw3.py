@@ -21,6 +21,6 @@ params = {
 url = 'https://weibo.com/6038922387/H1fXzA0R2?type=comment#_rnd1541417013028'
 response = requests.get(url, params=params, headers=headers)
 
-response.encoding=("utf-8")
+response.encoding=("gbk")
 
 print(response.text)

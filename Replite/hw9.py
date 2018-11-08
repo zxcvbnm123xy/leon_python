@@ -3,6 +3,7 @@
 __author__ = 'Leon'
 
 import requests
+import re
 
 # 使用headers
 headers = {
@@ -18,7 +19,13 @@ params = {
     'key2': 'test2'
 }
 # url 不需要添加后续的 ? 和 url参数
-url = 'http://httpbin.org/get'
+url = 'http://book.zongheng.com/chapter/672340/36898237.html'
 response = requests.get(url, params=params, headers=headers)
 
-print(response.text)
+response.encoding=("utf-8")
+
+content=response.text
+
+title='<title>(.*?)_.*?</title>'
+t=re.search(title,content,re.RegexFlag.M)
+print(t.group(1))

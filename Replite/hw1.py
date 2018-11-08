@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-__author__ = 'Leon'
-
+# __author__ = 'Leon'
+from first.homework.classtest import Person
 import requests
 
 # 使用headers
@@ -19,6 +19,8 @@ params = {
 }
 # url 不需要添加后续的 ? 和 url参数
 url = 'http://httpbin.org/get'
-response = requests.get(url, params=params, headers=headers)
+response = requests.get(url, params=params, headers=headers,proxies={'http':'127.0.0.1:8888'})
 
 print(response.text)
+
+a=Person()

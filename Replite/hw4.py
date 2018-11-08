@@ -18,7 +18,8 @@ params = {
     'key2': 'test2'
 }
 # url 不需要添加后续的 ? 和 url参数
-url = 'http://httpbin.org/get'
+url = 'https://weibo.com/737878501/home?topnav=1&wvr=6'
 response = requests.get(url, params=params, headers=headers)
 
+response.encoding=("gbk")
 print(response.text)
