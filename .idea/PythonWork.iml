@@ -8,6 +8,9 @@
     <orderEntry type="jdk" jdkName="Python 3.6 (PythonWork) (1)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="scrapy180801" />
+    <orderEntry type="module" module-name="scrapy180804" />
+    <orderEntry type="module" module-name="scrapy180802dingdian" />
+    <orderEntry type="module" module-name="scrapy180803" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="renderExternalDocumentation" value="true" />

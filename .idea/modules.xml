@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PythonWork.iml" filepath="$PROJECT_DIR$/.idea/PythonWork.iml" />
       <module fileurl="file://$PROJECT_DIR$/scrapy180801/.idea/scrapy180801.iml" filepath="$PROJECT_DIR$/scrapy180801/.idea/scrapy180801.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrapy180802dingdian/.idea/scrapy180802dingdian.iml" filepath="$PROJECT_DIR$/scrapy180802dingdian/.idea/scrapy180802dingdian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrapy180803/.idea/scrapy180803.iml" filepath="$PROJECT_DIR$/scrapy180803/.idea/scrapy180803.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrapy180804/.idea/scrapy180804.iml" filepath="$PROJECT_DIR$/scrapy180804/.idea/scrapy180804.iml" />
     </modules>
   </component>
 </project>
